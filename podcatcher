@@ -1,0 +1,25 @@
+#!/usr/bin/make -f
+
+s ?= $(error Usage: podcatcher s=file.ini)
+ofile = $(if $(t), $(ofile_timestamp), $(ofile_simple))
+
+src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
+
+urls = $(shell ruby -rinifile -rerb -e '\
+module Kernel; def __dir__; return File.dirname("$1"); end; end; \
+puts IniFile.new(content: ERB.new(File.read("$1")).result). \
+  to_h.map{|k,v| k + "!" + v["url"]} \
+')
+
+ofile_simple := File.basename(p)
+ofile_timestamp := File.basename(p, ".*") + "." + DateTime.now.strftime("%Q") + File.extname(p)
+
+define urls2files :=
+ruby -rdate -ruri -ne 'f=$$_.split("!").map{|v| v.strip}; \
+  next if f.size != 2; \
+  p=URI(f[1]).path; \
+  puts File.join f[0], $(ofile)'
+endef
+
+all:
+	$(MAKE) -f $(src)/feed.mk $(call urls,$(s)) | $(urls2files)

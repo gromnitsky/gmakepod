@@ -3,10 +3,14 @@ override reverse := $(if $(reverse),.reverse(),)
 filter.type := .
 filter.url := .
 
+name = $(shell echo "$1" | cut -f1 -d'!')
+url  = $(shell echo "$1" | cut -f2 -d'!')
+
 %:
-	@curl -sL "$*" | nokogiri -e 'puts \
-$$_.css("enclosure,link[rel=\"enclosure\"]").\
+	@curl -sL --connect-timeout 15 -m 60 "$(call url,$*)" | nokogiri -e '\
+puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(filter.type)/) : true}.\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(filter.url)/)}\
-  $(reverse)[0...$(n)]'
+  $(reverse)[0...$(n)].\
+  map{|url| "$(call name,$*)" + "!" + url}'
