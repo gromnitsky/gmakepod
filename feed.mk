@@ -4,7 +4,8 @@ filter.type := .
 filter.url := .
 
 name = $(shell echo "$1" | cut -f1 -d'!')
-url  = $(shell echo "$1" | cut -f2 -d'!')
+ext  = $(shell echo "$1" | cut -f2 -d'!')
+url  = $(shell echo "$1" | cut -f3 -d'!')
 
 %:
 	@curl -sL --connect-timeout 15 -m 60 "$(call url,$*)" | nokogiri -e '\
@@ -13,4 +14,4 @@ puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(filter.url)/)}\
   $(reverse)[0...$(n)].\
-  map{|url| "$(call name,$*)" + "!" + url}'
+  map{|url| ["$(call name,$*)", "$(call ext,$*)", url].join "!"}'

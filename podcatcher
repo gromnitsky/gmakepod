@@ -8,18 +8,19 @@ src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 urls = $(shell ruby -rinifile -rerb -e '\
 module Kernel; def __dir__; return File.dirname("$1"); end; end; \
 puts IniFile.new(content: ERB.new(File.read("$1")).result). \
-  to_h.map{|k,v| k + "!" + v["url"]} \
+  to_h.map{|k,v| [k, v["convert-to"], v["url"]].join "!"} \
 ')
 
 ofile_simple := File.basename(p)
 ofile_timestamp := File.basename(p, ".*") + "." + DateTime.now.strftime("%Q") + File.extname(p)
 
-define urls2files :=
-ruby -rdate -ruri -ne 'f=$$_.split("!").map{|v| v.strip}; \
-  next if f.size != 2; \
-  p=URI(f[1]).path; \
-  puts File.join f[0], $(ofile)'
-endef
+urls2files := ruby -rdate -ruri -ne 'f = $$_.split("!").map{|v| v.strip}; \
+  next if f.size != 3; \
+  p = URI(f[2]).path; \
+  puts [f[1], File.join(f[0], $(ofile)), f[2]].join "!"'
+
+filter-out-downloaded := cat
 
 all:
-	$(MAKE) -f $(src)/feed.mk $(call urls,$(s)) | $(urls2files)
+	$(MAKE) -f $(src)/feed.mk $(call urls,$(s)) | $(filter-out-downloaded) | $(urls2files) | xargs make -f $(src)/download.mk
+	make -f dl.mk
