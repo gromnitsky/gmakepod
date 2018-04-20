@@ -1,0 +1,262 @@
+<?xml version='1.0' encoding='utf-8'?>
+
+<feed xmlns='http://www.w3.org/2005/Atom'
+xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd'
+xmlns:on='http://www.oreillynet.com/csrss/'
+xml:lang='en-US'>
+
+<title>Inside Digital Media Podcast Series: Photography</title>
+<link rel="alternate" type="text/html" href="http://digitalmedia.oreilly.com/podcast-photo/" hreflang="en" title="Inside Digital Media Podcast Series: Photography" />
+<subtitle type='text'>Inside Digital Media is an O'Reilly podcast series focusing on imaging and its converging technologies. Photographers don't just take pictures anymore; they often have to create multidimensional presentations involving audio, video, and even Rich Internet Applications such as Flash. Inside Digital Media talks to the experts in all of these disciplines to bring you the complete picture.</subtitle>
+<rights>Copyright O'Reilly Media, Inc.</rights>
+<id>http://digitalmedia.oreilly.com/podcast-photo/</id>
+<updated>2008-12-23T09:18:58-08:00</updated>
+<link rel="self" type="application/atom+xml" href="http://www.oreillynet.com/pub/feed/79"/>
+<itunes:author>O'Reilly Media, Inc.</itunes:author>
+<itunes:category text='Technology' />
+<itunes:explicit>no</itunes:explicit>
+<itunes:owner>
+<itunes:name>O'Reilly Media, Inc.</itunes:name>
+<itunes:email>webmaster@oreillynet.com</itunes:email>
+</itunes:owner>
+
+<entry>
+	<title>Rick Sammon on Portrait Photography</title>
+	<id>http://digitalmedia.oreilly.com/2008/12/23/rick-sammon-ppe.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/12/23/rick-sammon-ppe.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/12/23/rick-sammon-ppe.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;There's more to good portrait photography than just clicking the shutter. In this video presentation from Photo Plus Expo, expert travel photographer Rick Sammon demonstrates some of his favorite techniques for capturing the essence of his subjects. Many of these tips can be found in his latest book, &lt;a href="http://oreilly.com/catalog/9780596515744/index.html"&gt;Face to Face: Rick Sammon's Complete Guide to Photographing People&lt;/a&gt;. Not only will you learn about the physics of photography, but also the human side of making great images.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-12-23T09:18:58-08:10</updated>
+	<link rel='enclosure' type='video/mp4' length='233098445' href='http://cachefly.oreilly.com/digitalmedia/2008/12/rick_sammon_ppe.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:19:15</itunes:duration>
+	<on:short_desc>Rick Sammon on Portrait Photography</on:short_desc>
+</entry>
+
+<entry>
+	<title>Snapshots and TAT in ACR 5.2: Photoshop CS4 Companion for Photographers Screencast 5</title>
+	<id>http://digitalmedia.oreilly.com/2008/12/03/psc_sc05.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/12/03/psc_sc05.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/12/03/psc_sc05.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Adobe Camera Raw 5.2 features a handful of terrific new tools, including Snapshots and the Targeted Adjustment Tool. In this screencast designed to supplement &lt;a href="http://www.amazon.com/Photoshop-Companion-Photographers-Digital-Media/dp/0596521936/?tag=oreillycom-20" target="_blank"&gt;The Photoshop CS4 Companion for Photographers&lt;/a&gt;, Derrick shows you how to use these great new components.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-12-03T14:19:20-08:11</updated>
+	<link rel='enclosure' type='video/mp4' length='24315419' href='http://cachefly.oreilly.com/digitalmedia/2008/12/psc_sc05.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:06:46</itunes:duration>
+	<on:short_desc>Snapshots and TAT in ACR 5.2: Photoshop CS4 Companion for Photographers Screencast 5</on:short_desc>
+</entry>
+
+<entry>
+	<title>Batch Processing in ACR: Photoshop CS4 Companion for Photographers Screencast 4</title>
+	<id>http://digitalmedia.oreilly.com/2008/11/12/psc_sc04.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/11/12/psc_sc04.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/11/12/psc_sc04.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Not only is Adobe Camera Raw terrific for processing individual files, you can batch process with it too. In this screencast, based on Chapter 4 of &lt;a href="http://www.amazon.com/Photoshop-Companion-Photographers-Digital-Media/dp/0596521936/?tag=oreillycom-20" target="_blank"&gt;The Photoshop CS4 Companion for Photographers&lt;/a&gt;, Derrick shows you how ACR makes easy work of multiple images.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-11-12T08:20:15-08:12</updated>
+	<link rel='enclosure' type='video/mp4' length='19258831' href='http://cachefly.oreilly.com/digitalmedia/2008/11/psc_sc04.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:04:46</itunes:duration>
+	<on:short_desc>Batch Processing in ACR: Photoshop CS4 Companion for Photographers Screencast 4</on:short_desc>
+</entry>
+
+<entry>
+	<title>Collections in Bridge: Photoshop CS4 Companion for Photographers Screencast 3</title>
+	<id>http://digitalmedia.oreilly.com/2008/10/29/psc_sc03.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/10/29/psc_sc03.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/10/29/psc_sc03.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Collections are one of my favorite new features in Adobe Bridge CS4, which comes bundled with Photoshop. In this screencast, based on Chapter 3 of &lt;a href="http://www.amazon.com/Photoshop-Companion-Photographers-Digital-Media/dp/0596521936/?tag=oreillycom-20"&gt;The Photoshop CS4 Companion for Photographers&lt;/a&gt;, Derrick shows you how Collections add the flexibility to Bridge that we've been waiting for. Plus you'll learn how to build Smart Collections based on a variety of search criteria. This is truly fun stuff.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-10-29T07:49:11-08:13</updated>
+	<link rel='enclosure' type='video/mp4' length='12177071' href='http://cachefly.oreilly.com/digitalmedia/2008/10/psc_sc03.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:08:50</itunes:duration>
+	<on:short_desc>Collections in Bridge: Photoshop CS4 Companion for Photographers Screencast 3</on:short_desc>
+</entry>
+
+<entry>
+	<title>Photo Downloader: Photoshop CS4 Companion for Photographers Screencast 2</title>
+	<id>http://digitalmedia.oreilly.com/2008/10/23/psc_sc02.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/10/23/psc_sc02.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/10/23/psc_sc02.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Photo Downloader is one of the unheralded stars included in Photoshop CS4. In this screencast, based on Chapter 2 of &lt;a href="http://www.amazon.com/Photoshop-Companion-Photographers-Digital-Media/dp/0596521936/?tag=oreillycom-20"&gt;The Photoshop CS4 Companion for Photographers&lt;/a&gt;, Derrick shows you how Photo Downloader can help you keep your images organized. Plus he demonstrates how to add your copyright and how to simultaneously back up your photos to another drive &amp;#8212; all automatically during the downloading process.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-10-23T07:49:53-08:14</updated>
+	<link rel='enclosure' type='video/mp4' length='17614523' href='http://cachefly.oreilly.com/digitalmedia/2008/10/psc_sc02.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:09:01</itunes:duration>
+	<on:short_desc>Photo Downloader: Photoshop CS4 Companion for Photographers Screencast 2</on:short_desc>
+</entry>
+
+<entry>
+	<title>The Photoshop CS4 Companion for Photographers Screencast 1</title>
+	<id>http://digitalmedia.oreilly.com/2008/10/14/psc_sc01.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/10/14/psc_sc01.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/10/14/psc_sc01.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Photoshop CS4 contains all the tools you need for a complete photography workflow. In this series of screencasts based on the book, &lt;a href="http://oreilly.com/catalog/9780596521936/index.html"&gt;The Photoshop CS4 Companion for Photographers&lt;/a&gt;, Derrick shows you techniques from a chapter of the book. This week he starts with Chapter 1: The Quick-Start Roadmap. Here, you'll see the basic overview of this workflow and how the pieces fit together.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-10-14T07:19:02-08:15</updated>
+	<link rel='enclosure' type='video/mp4' length='3420358' href='http://cachefly.oreilly.com/digitalmedia/2008/10/psc_sc01.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:03:44</itunes:duration>
+	<on:short_desc>The Photoshop CS4 Companion for Photographers Screencast 1</on:short_desc>
+</entry>
+
+<entry>
+	<title>Getting Smart About Smart Objects - An Interview with Deke McClelland</title>
+	<id>http://digitalmedia.oreilly.com/2008/09/30/deke-mcclelland-psw.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/09/30/deke-mcclelland-psw.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/09/30/deke-mcclelland-psw.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;What makes Smart Objects in Photoshop CS3 so compelling to power users? Derrick Story wanted to get the inside scoop on non-destructive tools, so he sat down with Photoshop expert Deke McClelland to find out how Smart Objects can improve his photography workflow. This interview was recorded at Photoshop World in Orlando during the Spring of 2008.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-09-30T11:49:48-08:16</updated>
+	<link rel='enclosure' type='audio/mpeg' length='11177199' href='http://cachefly.oreilly.com/digitalmedia/2008/09/deke_mcclelland_psw.mp3' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:15:25</itunes:duration>
+	<on:short_desc>An Interview with Deke McClelland</on:short_desc>
+</entry>
+
+<entry>
+	<title>Sean Duggan on Digital Darkroom</title>
+	<id>http://digitalmedia.oreilly.com/2008/09/09/sean-duggan-psw.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/09/09/sean-duggan-psw.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/09/09/sean-duggan-psw.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Sean Duggan is an art photographer, educator, and Photoshop expert. He's recently teamed up with Katrin Eismann to publish The Creative Digital Darkroom. In this interview Sean talks about his approach to processing images and how to get the most out of digital capture.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-09-09T14:53:54-08:17</updated>
+	<link rel='enclosure' type='video/mp4' length='207375658' href='http://cachefly.oreilly.com/digitalmedia/2008/09/sean_duggan_psw.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:17:20</itunes:duration>
+	<on:short_desc>Sean Duggan on Digital Darkroom</on:short_desc>
+</entry>
+
+<entry>
+	<title>Vincent Versace on Photography and Creativity</title>
+	<id>http://digitalmedia.oreilly.com/2008/08/13/vincent-versace-psw.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/08/13/vincent-versace-psw.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/08/13/vincent-versace-psw.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;&lt;p&gt;Vincent Versace, noted photographer, author, and photography instructor, sits down with Derrick Story to discuss the some of the larger philosophical questions that inform the photographic creative process during this video interview from Photoshop World Orlando.&lt;/p&gt;
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-08-13T21:33:51-08:18</updated>
+	<link rel='enclosure' type='video/mp4' length='304138285' href='http://cachefly.oreilly.com/digitalmedia/2008/08/vincent_versace_psw.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:25:22</itunes:duration>
+	<on:short_desc>Derrick Story Interviews Vincent Versace</on:short_desc>
+</entry>
+
+<entry>
+	<title>Off to Beijing - An Interview with Derrick Story</title>
+	<id>http://digitalmedia.oreilly.com/2008/08/04/off-to-beijing.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/08/04/off-to-beijing.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/08/04/off-to-beijing.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;On August 4, Derrick Story is boarding a plane to Beijing to work in the media center at the Summer Olympics. In addition to his job of help photographers get their images out to the world, he'll be blogging, podcasting, and tweeting, not to mention capturing his own Olympic images. In this interview, Dan Brodnitz asks Derrick how he's preparing for this assignment.
+	</summary>
+	<author><name>Derrick Story, Dan Brodnitz</name></author>
+	<category term="Digital Media" />
+	<updated>2008-08-04T07:19:41-08:19</updated>
+	<link rel='enclosure' type='audio/mpeg' length='8490291' href='http://cachefly.oreilly.com/digitalmedia/2008/08/off_to_beijing_interview_08-04-08.mp3' />
+	<itunes:author>Derrick Story, Dan Brodnitz</itunes:author>
+	<itunes:duration>00:11:42</itunes:duration>
+	<on:short_desc>Off to Beijing - An Interview with Derek Story</on:short_desc>
+</entry>
+
+<entry>
+	<title>Stephen Johnson on Print Display and Digital Photography</title>
+	<id>http://digitalmedia.oreilly.com/2008/07/31/stephen-johnson-psw.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/07/31/stephen-johnson-psw.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/07/31/stephen-johnson-psw.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;&lt;p&gt;In this video interview, Stephen Johnson talks about his seminal work, &lt;a href="http://oreilly.com/catalog/9780596523701/ index.html"&gt;On Digital Photography&lt;/a&gt;, the evolution of digital cameras including how megapixels fit into that picture, and provides some great advice on how to best display your work. It's a terrific chat that I think you will enjoy.&lt;/p&gt;
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-07-31T21:33:51-08:20</updated>
+	<link rel='enclosure' type='video/mp4' length='231523964' href='http://cachefly.oreilly.com/digitalmedia/2008/07/stephen-johnson.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:19:08</itunes:duration>
+	<on:short_desc>Stephen Johnson on Print Display and Digital Photography</on:short_desc>
+</entry>
+
+<entry>
+	<title>Inside Lightroom 2 - Exclusive Interview</title>
+	<id>http://digitalmedia.oreilly.com/2008/07/29/lightroom-2-exclusive-interview.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/07/29/lightroom-2-exclusive-interview.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/07/29/lightroom-2-exclusive-interview.html'&gt;&lt;img src='http://admin.oreillynet.com/digitalmedia/article_2.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Lightroom 2 is brimming with enhancements for all its modules. Derrick Story interviews Tom Hogarty and Frederick Johnson to find out their favorite features in this latest release of Adobe's comprehensive photo management application. Tom and Frederick share plenty of insights and helpful tips to help you quickly get up to speed.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Lightroom" />
+	<updated>2008-07-29T21:33:51-08:21</updated>
+	<link rel='enclosure' type='audio/mpeg' length='14732038' href='http://cachefly.oreilly.com/digitalmedia/2008/07/lightroom_2_interview.mp3' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:20:22</itunes:duration>
+	<on:short_desc>Inside Lightroom 2 - Exclusive Interview</on:short_desc>
+</entry>
+
+<entry>
+	<title>Tim Grey Answers Your Digital Photography Questions</title>
+	<id>http://digitalmedia.oreilly.com/2008/07/17/tim-grey-psw.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/07/17/tim-grey-psw.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/07/17/tim-grey-psw.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Tim Grey, author of the just released Take Your Best Shot: Tim Grey Tackles Your Digital Darkroom Questions, sits down with Derrick Story to answer submitted questions about photography during this video interview from Photoshop World Orlando. Tim addresses a number of topics including film vs digital, megapixels, sharpening, color management, and more.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-07-18T21:33:51-08:22</updated>
+	<link rel='enclosure' type='video/mp4' length='288873990' href='http://cachefly.oreilly.com/digitalmedia/2008/07/tim_grey_psw_edit.m4v' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:23:48</itunes:duration>
+	<on:short_desc>Derrick Story Interviews Tim Grey</on:short_desc>
+</entry>
+
+<entry>
+	<title>John Paul Caponigro on the State of Printing</title>
+	<id>http://digitalmedia.oreilly.com/2008/04/23/caponigro-state-of-printing.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/04/23/caponigro-state-of-printing.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/04/23/caponigro-state-of-printing.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Photographer and fine art printing expert John Paul Caponigro sits down with Derrick Story at Photoshop World 08 in Orlando to provide an inside look at the Epson Print Academy, the changing world of photography, and even a few remarks about his favorite printing papers.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<category term="Digital Media" />
+	<updated>2008-04-23T21:33:51-08:23</updated>
+	<link rel='enclosure' type='audio/mpeg' length='7289859' href='http://downloads.oreilly.com/digitalmedia/2008/04/10_inside_dm_john_paul.mp3' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:13:39</itunes:duration>
+	<on:short_desc>Derrick Story Interviews John Paul Caponigro</on:short_desc>
+</entry>
+
+<entry>
+	<title>Katrin Eismann's Digital Darkroom Magic</title>
+	<id>http://digitalmedia.oreilly.com/2008/01/29/katrin-eismanns-digital-darkroom-magic.html</id>
+	<link rel='alternate' href='http://digitalmedia.oreilly.com/2008/01/29/katrin-eismanns-digital-darkroom-magic.html'/>
+	<summary type='html'>
+	&lt;a href='http://digitalmedia.oreilly.com/2008/01/29/katrin-eismanns-digital-darkroom-magic.html'&gt;&lt;img src='http://www.oreillynet.com/images/oreilly/digitalmedia/2007/09/inside_dm_111.jpg' width='111px' height='91px' alt='tile image' align='left' border='0' style='padding-right:5px;' /&gt;&lt;/a&gt;Katrin Eismann, coauthor of &lt;a href="http://www.oreilly.com/catalog/9780596100476/" target="_blank"&gt;The Creative Digital Darkroom&lt;/a&gt;, sat down with Derrick Story at PhotoPlus Expo in New York for a chat about how the darkroom has evolved from chemical-based to digital, and how that evolution has influenced her approach to image making. Katrin touches on many interesting topics, including her explanation on 3-step sharpening.
+	</summary>
+	<author><name>Derrick Story</name></author>
+	<updated>2008-01-29T21:33:51-08:24</updated>
+	<link rel='enclosure' type='audio/mpeg' length='8275305' href='http://downloads.oreilly.com/digitalmedia/2008/01/inside_dm_ppe07_ke.mp3' />
+	<itunes:author>Derrick Story</itunes:author>
+	<itunes:duration>00:17:06</itunes:duration>
+	<on:short_desc>Derrick Story Interviews Katrin Eismann</on:short_desc>
+</entry>
+
+</feed>

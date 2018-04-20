@@ -1,0 +1,369 @@
+<?xml version='1.0' encoding='utf-8' ?>
+<!--  RSS generated Thu, 14 Apr 2011 17:39:47 EDT -->
+<rss version='2.0' 
+ xmlns:itunes='http://www.itunes.com/dtds/podcast-1.0.dtd' 
+ xmlns:conversationsNetwork='http://conversationsnetwork.org/rssNamespace-1.0/'
+ xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns#'
+ xmlns:media='http://search.yahoo.com/mrss/'>
+  <channel>
+    <title>StackOverflow</title>
+    <itunes:author>The Conversations Network</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+    <itunes:keywords>it,information technology,software development</itunes:keywords>
+    <itunes:owner>
+      <itunes:name>The Conversations Network</itunes:name>
+      <itunes:email>webmaster@conversationsnetwork.org (The Conversations Network)</itunes:email>
+    </itunes:owner>
+    <link>http://itc.conversationsnetwork.org/series/stackoverflow.html</link>
+    <description>A series from Conversations Network</description>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2008, The Conversations Network</copyright>
+    <lastBuildDate>Thu, 14 Apr 2011 17:39:47 EDT</lastBuildDate>
+    <generator>Conversations Network Custom RSS Generator 4.0</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <managingEditor>webmaster@conversationsnetwork.org (The Conversations Network)</managingEditor>
+    <webMaster>webmaster@conversationsnetwork.org (The Conversations Network)</webMaster>
+    <itunes:image href='http://assets.conversationsnetwork.org/channels/ITConversations/itc-300x300.jpg'/>
+    <image>
+      <url>http://assets.conversationsnetwork.org/channels/ITConversations/itc-300x300.jpg</url>
+      <title>StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/series/stackoverflow.html</link>
+    </image>
+    <itunes:category text='Technology'>
+    </itunes:category>
+    <item>
+      <title>Episode 87 - Stack Overflow - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4458.html</link>
+      <description>Joel and Jeff sit down with our new community coordinator, Robert Cartaino, to discuss the future of Stack Overflow and Stack Exchange 2.0.</description>
+      <pubDate>Mon, 26 Apr 2010 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4458</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode87-2010.04.15.mp3' length='30554116' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment,stackoverflow community</itunes:keywords>
+      <itunes:duration>01:03:39</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 86 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4442.html</link>
+      <description>Joel and Jeff sit down with Anton Geraschenko of Math Overflow to discuss the unique qualities of a community of expert mathematicians, how to capture a sphere in a knot, and the importance of off-site backups.</description>
+      <pubDate>Wed, 24 Mar 2010 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4442</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode86-2010.03.17.mp3' length='26719064' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>00:55:40</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 85 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4432.html</link>
+      <description>Joel and Jeff discuss the pursuit of venture capital, why Joel is ending his blog, and the hidden power of Google&amp;#039;s web spider.</description>
+      <pubDate>Fri, 12 Mar 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4432</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode85-2010.03.09.mp3' length='29710661' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:01:54</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 84 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4417.html</link>
+      <description>Joel sits down with the Stack Exchange team, who are working on the hosted version of Stack Overflow.</description>
+      <pubDate>Fri, 19 Feb 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4417</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode84-2010.02.16.mp3' length='27849427' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>00:58:01</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 83 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4403.html</link>
+      <description>Joel and Jeff discuss the promise and peril of Email (both social and technical), Google Buzz, and the value of training material.
+
+
+
+</description>
+      <pubDate>Wed, 10 Feb 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4403</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode83-2010.02.09.mp3' length='25230979' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>00:52:34</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 82 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4391.html</link>
+      <description>Joel and Jeff sit down with Mac developer Daniel Jalkut to discuss Mac development and the new iPad.</description>
+      <pubDate>Fri, 5 Feb 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4391</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode82-2010.02.02.mp3' length='31742297' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment,iPad, Mac, OSX</itunes:keywords>
+      <itunes:duration>01:06:08</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 81 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4385.html</link>
+      <description>Joel and Jeff discuss the value of Deep Blue, the Five Whys process, and whether programmers should blog.</description>
+      <pubDate>Mon, 1 Feb 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4385</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode81-2010.01.26.mp3' length='33743913' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:10:18</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 80 - Stack Overflow - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4376.html</link>
+      <description>Joel and Jeff discuss GitHub, the value of formal code documentation, and how to decide what features belong in the next version of your software.</description>
+      <pubDate>Wed, 20 Jan 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4376</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode80-2010.01.19.mp3' length='32126076' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:06:56</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 79 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4359.html</link>
+      <description>Joel and Jeff discuss open sourcing Markdown, the necessity of barriers on the open internet, and the importance of design in the software process.</description>
+      <pubDate>Sat, 9 Jan 2010 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4359</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode79-2010.01.05.mp3' length='36701268' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>softwareDevelopment,markdown,wikipedia,design,parser</itunes:keywords>
+      <itunes:duration>01:16:28</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 78 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4340.html</link>
+      <description>Joel and Jeff sit down with the developers of LitmusApp and DocType to discuss ASCII vs. pixels, the power of Amazon EC2, and the unglamorous but critically important topic of backup.</description>
+      <pubDate>Wed, 23 Dec 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4340</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode78-2009.12.15.mp3' length='32150391' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:06:59</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 77 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4328.html</link>
+      <description>Joel and Jeff discuss how to (accidentally) destroy your software business, Google&amp;#039;s new DNS and page speed rankings, and why the most productive employees aren&amp;#039;t paid 10 times as much.</description>
+      <pubDate>Wed, 16 Dec 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4328</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode77-2009.12.08.mp3' length='33094376' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:08:57</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 76 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4321.html</link>
+      <description>Joel and Jeff discuss the Stack Overflow Careers philosophy, online community growth patterns, and how to tell if you&amp;#039;re Sid Meier or not.</description>
+      <pubDate>Thu, 3 Dec 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4321</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode76-2009.11.24.mp3' length='28499019' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>00:59:22</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 75 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4309.html</link>
+      <description>Joel and Jeff sit down with sysadmin extraordinaire Tom Limoncelli of Everything Sysadmin to discuss IPV6, dumb things for System Administrators to check, and the sysadmin community as reflected in Server Fault.</description>
+      <pubDate>Tue, 24 Nov 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4309</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode75-2009.11.17.mp3' length='33640396' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:10:05</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 74 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4292.html</link>
+      <description>Joel and Jeff sit down with Kathy Sierra and Bert Bates backstage at the Business of Software 2009 conference.</description>
+      <pubDate>Wed, 18 Nov 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4292</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode74-2009.11.10.mp3' length='30976432' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:04:32</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 73 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4291.html</link>
+      <description>Joel and Jeff discuss the meaning of &amp;quot;professionalism&amp;quot; online, the divide between ad-subsidized and pay business models, and the five things everyone should hate about their favorite programming language.</description>
+      <pubDate>Fri, 6 Nov 2009 00:00:00 EST</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4291</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode73-2009.11.06.mp3' length='29890805' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:02:16</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 72 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4281.html</link>
+      <description>Joel and Jeff sit down with Jon Skeet, software engineer at Google London, and the first Stack Overflow user to achieve a reputation of 100,000.</description>
+      <pubDate>Thu, 29 Oct 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4281</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode72-2009.10.28.mp3' length='37575828' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:18:17</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 71 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4277.html</link>
+      <description>A collection of clips recorded at the San Francisco DevDays conference including Joel Spolsky, Mark Harrison, Jeff Atwood, Scott Hanselman and Rory Blythe.</description>
+      <pubDate>Wed, 21 Oct 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4277</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode71-2009.10.19.mp3' length='52025112' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:48:23</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 70 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4269.html</link>
+      <description>Joel and Jeff discuss DevDays, the diversity of Stack Exchange sites, the debut of CVs and careers on Stack Overflow, and the viability of WiFi at tech conferences.</description>
+      <pubDate>Wed, 14 Oct 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4269</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode70-2009.10.13.mp3' length='32902025' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:08:33</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 69 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4253.html</link>
+      <description>Joel and Jeff sit down with Peter Seibel to discuss his new book Coders At Work, the effect of listening to music while coding, and the future of programming books.</description>
+      <pubDate>Wed, 30 Sep 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4253</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode69-2009.09.29.mp3' length='32367454' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:07:26</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 68 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4245.html</link>
+      <description>Joel and Jeff discuss outsourced DNS, virtual machine &amp;quot;appliances&amp;quot;, and programmers as library users versus library writers.</description>
+      <pubDate>Thu, 17 Sep 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4245</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode68-2009.09.15.mp3' length='27950223' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>00:58:14</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 67 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4237.html</link>
+      <description>Joel and Jeff discuss the ethics of Craigslist, the pitfalls of customer-installable software, and caching for anonymous web users.</description>
+      <pubDate>Thu, 10 Sep 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4237</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode67-2009.09.08.mp3' length='31908294' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:06:29</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 66 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4232.html</link>
+      <description>Joel and Jeff discuss reverse proxies, the pitfalls of self-support communities, and designing for engagement.</description>
+      <pubDate>Wed, 2 Sep 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4232</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode66-2009.09.01.mp3' length='34540788' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment,reverse proxies</itunes:keywords>
+      <itunes:duration>01:11:58</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 65 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4216.html</link>
+      <description>Joel and Jeff discuss lessons from a year of building Stack Overflow, the mysteries of COBOL, some YSlow website optimizations, and magic numbers.</description>
+      <pubDate>Wed, 12 Aug 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4216</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode65-2009.08.11.mp3' length='30807821' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:04:11</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 64 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4211.html</link>
+      <description>Joel and Jeff discuss the disappointment of Google AdWords, the difference in skillset between programmers and testers, and the value of standards groups to working programmers.</description>
+      <pubDate>Wed, 5 Aug 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4211</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode64-2009.08.04.mp3' length='32038532' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:06:45</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 63 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4204.html</link>
+      <description>Joel and Jeff discuss the Mythical Man Month problem, keeping communication in check, Windows 7, and web scaling.</description>
+      <pubDate>Wed, 29 Jul 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4204</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode63-2009.07.28.mp3' length='36086613' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment,Windows,Mythical Man Month,scaling</itunes:keywords>
+      <itunes:duration>01:15:11</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 62 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4195.html</link>
+      <description>Joel and Jeff discuss software updates, the power of APIs and plugins, and leading by example.</description>
+      <pubDate>Wed, 22 Jul 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4195</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode62-2009.07.21.mp3' length='31121030' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:04:50</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 61 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4177.html</link>
+      <description>Joel and Jeff sit down with Miguel de Icaza of the Mono project to discuss Mono, Silverlight / Moonlight, and the pros and cons of open sourcing your code.</description>
+      <pubDate>Wed, 15 Jul 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4177</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode61-2009.07.14.mp3' length='34410012' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment,Mono,Silverlight,Moonlight</itunes:keywords>
+      <itunes:duration>01:11:41</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 60 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4159.html</link>
+      <description>Joel and Jeff discuss the value (or lack thereof) of meta-discussion, how much &amp;quot;big iron&amp;quot; popular websites need, and whether code forking is sometimes inevitable.</description>
+      <pubDate>Wed, 1 Jul 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4159</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode60-2009.06.30.mp3' length='33015927' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:08:47</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 59 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4150.html</link>
+      <description>Joel and Jeff sit down with Damien Katz to discuss non-conventional databases, non-conventional programming languages, and taking on non-conventional programming projects.</description>
+      <pubDate>Wed, 24 Jun 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4150</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode59-2009.06.23.mp3' length='32574770' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:07:52</itunes:duration>
+    </item>
+    <item>
+      <title>Episode 58 - StackOverflow</title>
+      <link>http://itc.conversationsnetwork.org/shows/detail4148.html</link>
+      <description>Joel and Jeff discuss HTML encoding, designing &amp;quot;safe by default&amp;quot;, whether a question can be too simple, and the art of beta testing.</description>
+      <pubDate>Wed, 17 Jun 2009 00:00:00 EDT</pubDate>
+      <guid isPermaLink='false'>http://www.conversationsnetwork.org/episode-4148</guid>
+      <enclosure url='http://cdn.conversationsnetwork.org/ITC.SO-Episode58-2009.06.16.mp3' length='31472583' type='audio/mpeg' />
+      <conversationsNetwork:introMilliseconds>0</conversationsNetwork:introMilliseconds>
+      <itunes:keywords>internet-web,softwareDevelopment</itunes:keywords>
+      <itunes:duration>01:05:34</itunes:duration>
+    </item>
+  </channel>
+</rss>
