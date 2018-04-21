@@ -7,9 +7,10 @@ to-mp3 = cp $$< $$@
 	$$(to-mp3)
 endef
 
-ext   = $(shell echo "$1" | cut -f1 -d'!')
-ofile = $(shell echo "$1" | cut -f2 -d'!')
-url   = $(shell echo "$1" | cut -f3 -d'!')
+# foo/file.mp4!http://example.com/file.mp4!.mp3
+ofile = $(word 1,$(subst !, ,$1))
+url   = $(word 2,$(subst !, ,$1))
+ext   = $(word 3,$(subst !, ,$1))
 
 define rule =
 $(call ofile,$1):
