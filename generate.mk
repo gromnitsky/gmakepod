@@ -1,6 +1,7 @@
 define header :=
 # auto-generated
 src := $(mk.root)
+enclosures.curl = curl --connect-timeout 15 -RfL -C - "$$1" -o $$@
 to-mp3 = cp $$< $$@
 %.mp3: %.m4v
 	$$(to-mp3)
@@ -17,8 +18,8 @@ ext   = $(word 3,$(subst !, ,$1))
 define rule =
 $(call ofile,$1):
 	@mkdir -p $$(dir $$@)
-	echo curl -RfL -C- "$(call url,$1)" > $$@
-	ruby $$(src)/history.rb add "$(call url,$1)"
+	$$(call enclosures.curl,$(call url,$1))
+	@ruby $$(src)/history.rb add "$(call url,$1)"
 endef
 
 targets := $(foreach idx, $(MAKECMDGOALS),\
