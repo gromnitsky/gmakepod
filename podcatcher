@@ -5,7 +5,7 @@ s ?= $(error Usage: podcatcher s=file.ini)
 export timestamp := $(t)
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
-# for `enclosures-reject.rb` & `generate.mk`
+# for `generate.mk`
 export mk.root := $(src)
 mk := $(MAKE) --no-print-directory
 
