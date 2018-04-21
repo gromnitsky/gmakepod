@@ -18,9 +18,9 @@ download.mk: enclosures
 	xargs $(mk) -f $(src)/generate.mk < $< > $@
 
 .PHONY: enclosures
-enclosures: feeds
+enclosures: ini
 	ruby $(src)/enclosures-print.rb < $< | ruby $(src)/enclosures-reject.rb > $@
 
-.PHONY: feeds
-feeds:
+.PHONY: ini
+ini:
 	$(mk) -f $(src)/feed-parse.mk -k `ruby $(src)/ini-parse.rb "$(s)"` > $@
