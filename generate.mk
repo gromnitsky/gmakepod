@@ -1,12 +1,15 @@
 define header :=
 # auto-generated
 src := $(mk.root)
-enclosures.curl = curl --connect-timeout 15 -RfL -C - "$$1" -o $$@
-to-mp3 = cp $$< $$@
+enclosures.curl.opt :=
+enclosures.curl = curl --connect-timeout 15 -RfL -C - "$$1" -o $$@ $(enclosures.curl.opt)
+ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
-	$$(to-mp3)
+	$$(ffmpeg.mp3)
 %.mp3: %.m4a
-	$$(to-mp3)
+	$$(ffmpeg.mp3)
+%.mp3: %.ogg
+	$$(ffmpeg.mp3)
 .PHONY: all
 endef
 

@@ -1,0 +1,3 @@
+[submodule "sh-progress-reporter"]
+	path = sh-progress-reporter
+	url = https://github.com/gromnitsky/sh-progress-reporter.git

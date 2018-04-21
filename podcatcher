@@ -37,6 +37,8 @@ filter.name=ruby
     by the name of the feed from in your .ini
 enclosures.curl='wget -q --show-progress $$1 -O $$@'
     can be used for memorizing enclosures urls w/o downloading them
+enclosures.curl.opt='-s'
+    pass additional opts to curl (only if you do not modify `enclosures.curl`)
 t=1
     add a timestamp in the output name of each enclosure
 endef
