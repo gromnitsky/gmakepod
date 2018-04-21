@@ -19,7 +19,7 @@ download.mk: enclosures
 enclosures: ini
 	ruby $(src)/enclosures-print.rb < $< | while read -r line; do \
 	  url=`echo "$$line" | cut -d'!' -f2`; \
-	  [ -z `ruby $(src)/history.rb get "$$url"` ] && echo "$$line"; \
+	  ([ -z `ruby $(src)/history.rb get "$$url"` ] && echo "$$line");:; \
 	done > $@
 
 .PHONY: ini
