@@ -11,10 +11,10 @@ ext  = $(word 3,$(subst !, ,$1))
 
 .ONESHELL:
 
-# should print: foo!http://example.com/file.mp4!.mp3
+# output: foo!http://example.com/file.mp4!.mp3
 %:
 	@echo "$(call name,$*)" | grep -Eiq "$(filter.name)" || exit 0
-	@curl -sL --connect-timeout 15 -m 60 "$(call url,$*)" | nokogiri -e '\
+	@curl -sfL --connect-timeout 15 -m 60 "$(call url,$*)" | nokogiri -e '\
 puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(filter.type)/) : true}.\
   map{|e| e["url"] || e["href"]}.\
