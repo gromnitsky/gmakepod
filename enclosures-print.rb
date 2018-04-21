@@ -12,5 +12,5 @@ ofile = ENV['timestamp'] == 1 ? method(:timestamp) : method(:simple)
 while (line = gets)
   name, feed, ext = line.split("!")
   p = URI(feed).path
-  puts [File.join(name, ofile.call(p)), feed, ext].join '!'
+  puts [File.join('media', name, ofile.call(p)), feed, ext].join '!'
 end
