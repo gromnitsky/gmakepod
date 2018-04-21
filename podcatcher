@@ -1,12 +1,25 @@
 #!/usr/bin/make -f
 
 s ?= $(error Usage: podcatcher s=file.ini)
-export timestamp = $(t)
+export timestamp = $(t)		# for `enclosures-print.rb`
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 
-filter-out-downloaded := cat
+MK := $(MAKE) --no-print-directory
+mk := make --no-print-directory
 
-all:
-	$(MAKE) --no-print-directory -f $(src)/ini-parse.mk `ruby $(src)/ini-parse.rb "$(s)"` | $(filter-out-downloaded) | ruby $(src)/enclosures-print.rb | xargs make -f $(src)/generate.mk
-	make -f dl.mk
+.PHONY: run
+run: download.mk
+	$(MK) -f $<
+
+.PHONY: download.mk
+download.mk: enclosures
+	xargs $(mk) -f $(src)/generate.mk < $< > $@
+
+.PHONY: enclosures
+enclosures: feeds
+	ruby $(src)/enclosures-print.rb < $< > $@
+
+.PHONY: feeds
+feeds:
+	$(MK) -f $(src)/feed-parse.mk `ruby $(src)/ini-parse.rb "$(s)"` > $@

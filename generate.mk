@@ -23,12 +23,12 @@ targets := $(foreach idx, $(MAKECMDGOALS),\
     $(basename $(call ofile,$(idx)))$(call ext,$(idx)),\
    $(call ofile,$(idx))))
 
-$(file > dl.mk,$(header))
-$(file >> dl.mk,.INTERMEDIATE: $(foreach idx, $(MAKECMDGOALS),\
+$(info $(header))
+$(info .INTERMEDIATE: $(foreach idx, $(MAKECMDGOALS),\
   $(if $(call ext,$(idx)),$(call ofile,$(idx)))))
 
-$(file >> dl.mk,all: $(targets))
+$(info all: $(targets))
 
 %:
-	$(file >> dl.mk,$(call rule,$*))
+	$(info $(call rule,$*))
 	@:
