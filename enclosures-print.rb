@@ -6,7 +6,7 @@ def timestamp p
   File.basename(p, ".*") + "." + DateTime.now.strftime("%Q") + File.extname(p)
 end
 
-ofile = ENV['timestamp'] == 1 ? method(:timestamp) : method(:simple)
+ofile = ENV['t'].to_s != '' ? method(:timestamp) : method(:simple)
 
 # input: foo!http://example.com/file.m4v!.mp3
 # output: media/foo/file.m4v!http://example.com/file.m4v!.mp3

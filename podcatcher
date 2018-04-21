@@ -1,8 +1,6 @@
 #!/usr/bin/make -f
 
 s ?= $(error Usage: podcatcher s=file.ini)
-# for `enclosures-print.rb`
-export timestamp := $(t)
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 # for `generate.mk`
