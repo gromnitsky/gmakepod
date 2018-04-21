@@ -24,3 +24,24 @@ enclosures: ini
 .PHONY: ini
 ini:
 	$(mk) -f $(src)/feed-parse.mk -k `ruby $(src)/ini-parse.rb "$(s)"` > $@
+
+
+define help =
+Options:
+
+e=10
+    how many enclosures to download
+filter.type=audio
+    use only enclosures in which their 'type' attr match the regexp
+filter.url=mp3
+    by the enclosure url; useful when the 'type' attr is missing
+filter.name=ruby
+    by the name of the feed from in your .ini
+enclosures.curl='wget -q --show-progress $$1 -O $$@'
+    can be used for memorizing enclosures urls w/o downloading them
+t=1
+    add a timestamp in the output name of each enclosure
+endef
+
+.PHONY: help
+help:; $(info $(help))@:
