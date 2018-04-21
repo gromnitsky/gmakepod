@@ -31,8 +31,11 @@ targets := $(foreach idx, $(MAKECMDGOALS),\
    $(call ofile,$(idx))))
 
 $(info $(header))
+# calculate intermediate targets
+convertible = $(shell [ -z "$1" ] || ([ "$1" != "$2" ] && echo true))
 $(info .INTERMEDIATE: $(foreach idx, $(MAKECMDGOALS),\
-  $(if $(call ext,$(idx)),$(call ofile,$(idx)))))
+  $(if $(call convertible,$(call ext,$(idx)),$(suffix $(call ofile,$(idx)))),\
+    $(call ofile,$(idx)))))
 
 $(info all: $(targets))
 
