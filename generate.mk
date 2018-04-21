@@ -1,10 +1,12 @@
 define header :=
 # auto-generated
+src := $(mk.root)
 to-mp3 = cp $$< $$@
 %.mp3: %.m4v
 	$$(to-mp3)
 %.mp3: %.m4a
 	$$(to-mp3)
+.PHONY: all
 endef
 
 # foo/file.mp4!http://example.com/file.mp4!.mp3
@@ -15,7 +17,8 @@ ext   = $(word 3,$(subst !, ,$1))
 define rule =
 $(call ofile,$1):
 	@mkdir -p $$(dir $$@)
-	echo curl $(call url,$1) > $$@
+	echo curl -RfL -C- "$(call url,$1)" > $$@
+	ruby $$(src)/history.rb add "$(call url,$1)"
 endef
 
 targets := $(foreach idx, $(MAKECMDGOALS),\
