@@ -1,15 +1,17 @@
 #!/usr/bin/make -f
 
 s ?= $(error Usage: podcatcher s=file.ini)
+j := 1
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 # for `generate.mk`
 export mk.root := $(src)
 mk := $(MAKE) --no-print-directory
+jobs :=  -j$(j) -Oline
 
 .PHONY: run
 run: download.mk
-	$(mk) -f $< -k
+	$(mk) -f $< -k $(jobs)
 
 .PHONY: download.mk
 download.mk: enclosures
@@ -24,14 +26,16 @@ enclosures: ini
 
 .PHONY: ini
 ini:
-	$(mk) -f $(src)/feed-parse.mk -k `ruby $(src)/ini-parse.rb "$(s)"` > $@
+	$(mk) -f $(src)/feed-parse.mk -k $(jobs) `ruby $(src)/ini-parse.rb "$(s)"` > $@
 
 
 define help =
-Options:
+Options (the values are examples, not defaults):
 
 e=10
     how many enclosures to download
+j=4
+    a number of parallel jobs for a downloading phase
 filter.type=audio
     use only enclosures in which their 'type' attr match the regexp
 filter.url=mp3
