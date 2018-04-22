@@ -46,6 +46,8 @@ filter.url=mp3
     by the enclosure url; useful when the 'type' attr is missing
 filter.name=ruby
     by the name of the feed from in your .ini
+rsort=1
+    grab enclosures starting from the bottom of the feed
 enclosures.curl='wget -q --show-progress $$1 -O $$@'
     can be used for memorizing enclosures urls w/o downloading them
 enclosures.curl.opt='-s'

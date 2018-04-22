@@ -1,13 +1,16 @@
 e := 2
-override reverse := $(if $(reverse),.reverse(),)
 filter.type := .
 filter.url := .
 filter.name := .
+rsort :=
 
-# foo!http://example.com/rss!.mp3
-name = $(word 1,$(subst !, ,$1))
-url  = $(word 2,$(subst !, ,$1))
-ext  = $(word 3,$(subst !, ,$1))
+# foo!http://example.com/rss!.mp3!true
+name       = $(shell echo "$1" | cut -d'!' -f1)
+url        = $(shell echo "$1" | cut -d'!' -f2)
+convert-to = $(shell echo "$1" | cut -d'!' -f3)
+reverse    = $(shell echo "$1" | cut -d'!' -f4)
+
+revsort = $(if $(or $(rsort),$(call reverse,$*)),.reverse(),)
 
 .ONESHELL:
 
@@ -19,5 +22,5 @@ puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(filter.type)/) : true}.\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(filter.url)/)}\
-  $(reverse)[0...$(e)].\
-  map{|url| ["$(call name,$*)", url, "$(call ext,$*)"].join "!"}'
+  $(revsort)[0...$(e)].\
+  map{|url| ["$(call name,$*)", url, "$(call convert-to,$*)", "$(call reverse,$*)"].join "!"}'
