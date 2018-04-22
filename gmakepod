@@ -7,11 +7,10 @@ src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 # for `generate.mk`
 export mk.root := $(src)
 mk := $(MAKE) --no-print-directory
-jobs :=  -j$(j) -Oline
 
 .PHONY: run
 run: .download.mk
-	$(mk) -f $< -k $(jobs)
+	$(mk) -f $< -k -j$(j) -Oline
 
 .PHONY: .download.mk
 .download.mk: .enclosures.new
@@ -34,7 +33,7 @@ endif
 
 .PHONY: .ini
 .ini:
-	$(mk) -f $(src)/feed-parse.mk -k $(jobs) `ruby $(src)/ini-parse.rb "$(s)"` > $@
+	$(mk) -f $(src)/feed-parse.mk -k -j$$(($(j)*3)) `ruby $(src)/ini-parse.rb "$(s)"` > $@
 
 
 define help =
