@@ -10,22 +10,26 @@ mk := $(MAKE) --no-print-directory
 jobs :=  -j$(j) -Oline
 
 .PHONY: run
-run: download.mk
+run: .download.mk
 	$(mk) -f $< -k $(jobs)
 
-.PHONY: download.mk
-download.mk: enclosures
+.PHONY: .download.mk
+.download.mk: .enclosures.new
 	xargs $(mk) -f $(src)/generate.mk < $< > $@
 
-.PHONY: enclosures
-enclosures: ini
-	ruby $(src)/enclosures-print.rb < $< | while read -r line; do \
+.PHONY: .enclosures.new
+.enclosures.new: .enclosures
+	while read -r line; do \
 	  url=`echo "$$line" | cut -d'!' -f2`; \
 	  ([ -z `ruby $(src)/history.rb get "$$url"` ] && echo "$$line");:; \
-	done > $@
+	done < $< > $@
 
-.PHONY: ini
-ini:
+.PHONY: .enclosures
+.enclosures: .ini
+	ruby $(src)/enclosures-print.rb < $< > $@
+
+.PHONY: .ini
+.ini:
 	$(mk) -f $(src)/feed-parse.mk -k $(jobs) `ruby $(src)/ini-parse.rb "$(s)"` > $@
 
 
