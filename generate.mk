@@ -6,10 +6,13 @@ enclosures.curl = curl --connect-timeout 15 -RfL -C - "$$1" -o $$@ $(enclosures.
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)
+	rm $$<
 %.mp3: %.m4a
 	$$(ffmpeg.mp3)
+	rm $$<
 %.mp3: %.ogg
 	$$(ffmpeg.mp3)
+	rm $$<
 .PHONY: all
 endef
 
@@ -32,12 +35,6 @@ targets := $(foreach idx, $(MAKECMDGOALS),\
    $(call ofile,$(idx))))
 
 $(info $(header))
-# calculate intermediate targets
-interm = $(shell [ -z "$1" ] || ([ "$1" != "$2" ] && echo true))
-$(info .INTERMEDIATE: $(foreach idx, $(MAKECMDGOALS),\
-  $(if $(call interm,$(call convert-to,$(idx)),$(suffix $(call ofile,$(idx)))),\
-    $(call ofile,$(idx)))))
-
 $(info all: $(targets))
 
 %:
