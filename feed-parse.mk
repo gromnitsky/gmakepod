@@ -17,6 +17,7 @@ revsort = $(if $(or $(rsort),$(call reverse,$*)),.reverse(),)
 # output: foo!http://example.com/file.mp4!.mp3
 %:
 	@echo "$(call name,$*)" | grep -Eiq "$(g)" || exit 0
+	@echo Processing "$(call name,$*)" 1>&2
 	@curl -sfL --connect-timeout 15 -m 60 "$(call url,$*)" | nokogiri -e '\
 puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(filter.type)/) : true}.\
