@@ -47,19 +47,20 @@ e=10
 j=4
     a number of parallel jobs for a downloading phase
 f=1
-    force to redownload already processed enclosures
+    force to redownload already processed enclosures; useful w/ g=
+g=ruby
+    grab only enclosures matching subscriptions names in .ini
 filter.type=audio
-    use only enclosures in which their 'type' attr match the regexp
+    by the enclosures 'type' attr
 filter.url=mp3
     by the enclosure url; useful when the 'type' attr is missing
-filter.name=ruby
-    by the name of the feed from in your .ini
 rsort=1
     grab enclosures starting from the bottom of the feed
-enclosures.curl='wget -q --show-progress $$1 -O $$@'
-    can be used for memorizing enclosures urls w/o downloading them
-enclosures.curl.opt='-s'
-    pass additional opts to curl (only if you do not modify `enclosures.curl`)
+e.curl='wget -q --show-progress $$1 -O $$@'
+    can be used for memorizing enclosures urls w/o downloading them,
+    like e.curl='echo 1'
+e.curl.opt='-s'
+    pass additional opts to curl (valid only if you do not modify `e.curl`)
 t=1
     add a timestamp in the output name of each enclosure
 endef

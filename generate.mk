@@ -1,8 +1,8 @@
 define header :=
 # auto-generated
 src := $(mk.root)
-enclosures.curl.opt :=
-enclosures.curl = curl --connect-timeout 15 -fL -C - "$$1" -o $$@ $(enclosures.curl.opt)
+e.curl.opt :=
+e.curl = curl --connect-timeout 15 -fL -C - "$$1" -o $$@ $(e.curl.opt)
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)
@@ -25,7 +25,7 @@ reverse    = $(shell echo "$1" | cut -d'!' -f4)
 define rule =
 $(call ofile,$1):
 	@mkdir -p $$(dir $$@)
-	$$(call enclosures.curl,$(call url,$1))
+	$$(call e.curl,$(call url,$1))
 	@ruby $$(src)/history.rb add "$(call url,$1)"
 endef
 
