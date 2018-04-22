@@ -1,6 +1,6 @@
 #!/usr/bin/make -f
 
-s ?= $(error Usage: podcatcher s=file.ini)
+s := podcasts.ini
 j := 1
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
@@ -36,6 +36,8 @@ run: .download.mk
 define help =
 Options (the values are examples, not defaults):
 
+s=file.ini
+    a list of your subscriptions
 e=10
     how many enclosures to download
 j=4
