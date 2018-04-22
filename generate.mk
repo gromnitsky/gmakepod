@@ -2,7 +2,7 @@ define header :=
 # auto-generated
 src := $(mk.root)
 enclosures.curl.opt :=
-enclosures.curl = curl --connect-timeout 15 -RfL -C - "$$1" -o $$@ $(enclosures.curl.opt)
+enclosures.curl = curl --connect-timeout 15 -fL -C - "$$1" -o $$@ $(enclosures.curl.opt)
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)

@@ -19,10 +19,14 @@ run: .download.mk
 
 .PHONY: .enclosures.new
 .enclosures.new: .enclosures
+ifdef f
+	cp $< $@
+else
 	while read -r line; do \
 	  url=`echo "$$line" | cut -d'!' -f2`; \
 	  ([ -z `ruby $(src)/history.rb get "$$url"` ] && echo "$$line");:; \
 	done < $< > $@
+endif
 
 .PHONY: .enclosures
 .enclosures: .ini
@@ -42,6 +46,8 @@ e=10
     how many enclosures to download
 j=4
     a number of parallel jobs for a downloading phase
+f=1
+    force to redownload already processed enclosures
 filter.type=audio
     use only enclosures in which their 'type' attr match the regexp
 filter.url=mp3
