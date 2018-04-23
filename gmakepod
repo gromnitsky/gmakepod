@@ -4,8 +4,6 @@ s := podcasts.ini
 j := 1
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
-# for `generate.mk`
-export mk.root := $(src)
 mk := $(MAKE) --no-print-directory -f
 
 run: .download.mk
@@ -15,14 +13,7 @@ run: .download.mk
 	xargs $(mk) $(src)/generate.mk < $< > $@
 
 .files.new: .files
-ifdef f
-	cp $< $@
-else
-	while read -r line; do \
-	  url=`echo "$$line" | cut -d'!' -f2`; \
-	  ([ -z `ruby $(src)/history.rb get "$$url"` ] && echo "$$line");:; \
-	done < $< > $@
-endif
+	$(if $(f),cp $< $@,xargs $(mk) $(src)/enclosures-reject.mk < $< > $@)
 
 .files: .enclosures
 	ruby $(src)/enclosures-print.rb < $< > $@
