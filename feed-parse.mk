@@ -14,7 +14,7 @@ revsort = $(if $(or $(rsort),$(call reverse,$*)),.reverse(),)
 
 .ONESHELL:
 
-# output: foo!http://example.com/file.mp4!.mp3
+# output: foo!http://example.com/file.mp4!.mp3!true
 %:
 	@echo "$(call name,$*)" | grep -Eiq "$(g)" || exit 0
 	@echo Processing "$(call name,$*)" 1>&2

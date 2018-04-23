@@ -9,8 +9,8 @@ end
 
 ofile = ENV['t'].to_s != '' ? method(:timestamp) : method(:simple)
 
-# input: foo!http://example.com/file.m4v!.mp3
-# output: media/foo/file.m4v!http://example.com/file.m4v!.mp3
+# input: foo!http://example.com/file.m4v!.mp3|true
+# output: media/foo/file.m4v!http://example.com/file.m4v!.mp3|true
 while (line = gets)
   name, feed, convert_to, reverse = line.split("!")
   p = norm URI(feed).path
