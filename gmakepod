@@ -6,18 +6,15 @@ j := 1
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 # for `generate.mk`
 export mk.root := $(src)
-mk := $(MAKE) --no-print-directory
+mk := $(MAKE) --no-print-directory -f
 
-.PHONY: run
 run: .download.mk
-	$(mk) -f $< -k -j$(j) -Oline
+	$(mk) $< -k -j$(j) -Oline
 
-.PHONY: .download.mk
-.download.mk: .enclosures.new
-	xargs $(mk) -f $(src)/generate.mk < $< > $@
+.download.mk: .files.new
+	xargs $(mk) $(src)/generate.mk < $< > $@
 
-.PHONY: .enclosures.new
-.enclosures.new: .enclosures
+.files.new: .files
 ifdef f
 	cp $< $@
 else
@@ -27,16 +24,17 @@ else
 	done < $< > $@
 endif
 
-.PHONY: .enclosures
-.enclosures: .ini
+.files: .enclosures
 	ruby $(src)/enclosures-print.rb < $< > $@
 
-.PHONY: .ini
-.ini:
-	$(mk) -f $(src)/feed-parse.mk -k -j$$(($(j)*3)) `ruby $(src)/ini-parse.rb "$(s)"` | sort -u > $@
+.enclosures: .feeds
+	xargs $(mk) $(src)/feed-parse.mk -k -j$$(($(j)*3)) < $< | sort -u > $@
 
+.PHONY: .feeds
+.feeds: $(s)
+	ruby $(src)/ini-parse.rb $< > $@
 
-define help =
+define help :=
 Options (the values are examples, not defaults):
 
 s=file.ini
