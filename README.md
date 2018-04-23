@@ -6,27 +6,23 @@ A tiny podcast client written in GNU Make with sprinkles of Ruby.
 
 Why not?
 
-~107 lines of Make + ~37 lines of Ruby according to cloc. You'd think
-w/ such a size it cannot make practically anything except for
-downloading a bunch of files, but it can do so much more, swiftly & w/
-style! hehe
+107 lines of Make + 39 lines of Ruby according to cloc. You'd think w/
+such a size it cannot make practically anything except for downloading
+a bunch of files, but it can do so much more, swiftly & w/ style! hehe
 
-* parallel downloads;
-* filtering by subs name, enclosure type or url;
-* auto-converting odd ogg/m4a/whatever to mp3;
-* won't ever download an enclosure twice unless you say otherwise;
-* reverse sorting, so you can fetch the 1st 2 episodes, instead of the
+* download in parallel;
+* filter by subs name, enclosure type or url;
+* auto-convert odd ogg/m4a/whatever to mp3;
+* no pointless re-downloading of enclosures unless you command
+  otherwise;
+* sort in reverse, so you may fetch the 1st 2 episodes, instead of the
   last 2, for example;
 * 'catch up' w/ feeds w/o downloading anything.
-
-Why Make? For we can apply its parallel exec caps when fetching feeds
-& enclosures. We can't use it for xml parsing, of course, that's why
-we need an external tooling for that (nokogiri).
 
 ## Install
 
 ~~~
-$ git clone --recurse-submodules ...
+$ git clone --recurse-submodules https://github.com/gromnitsky/gmakepod.git
 $ cd gmakepod
 $ bundle
 ~~~
@@ -39,17 +35,17 @@ Chose an 'umbrella' dir for your podcasts, e.g., `~/podcasts`; create
 a file named `podcasts.ini` in that dir:
 
 ~~~
-[bbc-in-our-time]
+[BBC In Our Time]
 url = http://downloads.bbc.co.uk/podcasts/radio4/iot/rss.xml
 
-[dave-winer]
+[Dave Winer]
 url = http://scripting.com/rss.xml
 convert-to = .mp3
 ~~~
 
-Section names cannot contain spaces because Make. An optional
-`convert-to` param tells gmakepod that it'll need to convert each
-enclosure (from that feed only) to `mp3`. The dot is important.
+An optional `convert-to` param tells gmakepod that it'll need to
+convert each enclosure (from that feed only) to `mp3`. The dot is
+important.
 
 Now, cd to `~/podcasts` & type `gmakepod`. It should download the last
 2 enclosures tops from each feed.
@@ -57,17 +53,17 @@ Now, cd to `~/podcasts` & type `gmakepod`. It should download the last
 ~~~
 $ tree --noreport media
 media/
-├── bbc-in-our-time
+├── BBC_In_Our_Time
 │   ├── p02q5q4c.mp3
 │   └── p02q5phk.mp3
-├── dave-winer
-│   └── denverPostAndBerkeleyside.mp3
+└── Dave_Winer
+    └── denverPostAndBerkeleyside.mp3
 ~~~
 
 If you run `gmakepod` again it says '`make[1]: *** No targets.
 Stop.`' because it refuses to process already processed enclosures.
 
-Type also `gmakepod help`.
+For parallel downloads, pass `j=N` param. Type also `gmakepod help`.
 
 ## How does it work?
 
@@ -81,7 +77,7 @@ Type also `gmakepod help`.
    enclosures
 6. run the makefile
 
-xxx->mp3 conversions require ffmpeg & gawk.
+xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
 
 ![kumamon](https://ultraimg.com/images/2018/04/23/MTW8.jpg)
 
