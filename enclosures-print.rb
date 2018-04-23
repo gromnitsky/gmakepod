@@ -8,7 +8,7 @@ def timestamp p
 end
 
 ofile = ENV['t'].to_s != '' ? method(:timestamp) : method(:simple)
-def normalize p; CGI.unescape(p).gsub(/[\s%!]/, "_"); end
+def normalize p; CGI.unescape(p).gsub(/[^[:word:].,\/-]/, "_"); end
 
 # input: foo!http://example.com/file.m4v!.mp3
 # output: media/foo/file.m4v!http://example.com/file.m4v!.mp3
