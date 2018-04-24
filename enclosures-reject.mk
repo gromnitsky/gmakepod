@@ -1,4 +1,5 @@
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
-url = $(shell echo "$1" | cut -d'!' -f2)
+include $(src)/u.mk
 %:
-	-@ruby $(src)/history.rb get "$(call url,$*)" > /dev/null || echo "$*"
+	@$(call conf_parse,$*)
+	-@ruby $(src)/history.rb get "$(.url)" > /dev/null || echo "$*"

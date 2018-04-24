@@ -42,7 +42,7 @@ filter.type=audio
     by the enclosures 'type' attr
 filter.url=mp3
     by the enclosure url; useful when the 'type' attr is missing
-rsort=1
+reverse=1
     grab enclosures starting from the bottom of the feed
 e.curl='wget -q --show-progress $$1 -O $$@'
     can be used for memorizing enclosures urls w/o downloading them,

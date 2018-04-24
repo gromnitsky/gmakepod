@@ -1,4 +1,5 @@
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
+include $(src)/u.mk
 
 define header :=
 # auto-generated
@@ -18,27 +19,26 @@ ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 .PHONY: all
 endef
 
-# foo/file.mp4!http://example.com/file.mp4!.mp3!true
-ofile      = $(shell echo "$1" | cut -d'!' -f1)
-url        = $(shell echo "$1" | cut -d'!' -f2)
-convert-to = $(shell echo "$1" | cut -d'!' -f3)
-reverse    = $(shell echo "$1" | cut -d'!' -f4)
-
 define rule =
-$(call ofile,$1):
+$(.name):
 	@mkdir -p $$(dir $$@)
-	$$(call e.curl,$(call url,$1))
-	@ruby $$(src)/history.rb add "$(call url,$1)"
+	$$(call e.curl,$(.url))
+	@ruby $$(src)/history.rb add "$(.url)"
 endef
 
 targets := $(foreach idx, $(MAKECMDGOALS),\
-  $(if $(call convert-to,$(idx)),\
-    $(basename $(call ofile,$(idx)))$(call convert-to,$(idx)),\
-   $(call ofile,$(idx))))
+  $(conf_parse_init)\
+  $(call conf_parse,$(idx))\
+  $(if $(.convert-to),\
+    $(basename $(.name))$(.convert-to),\
+   $(.name)))
 
 $(info $(header))
 $(info all: $(targets))
 
 %:
+	@$(conf_parse_init)
+	@$(call conf_parse,$*)
+
 	$(info $(call rule,$*))
 	@:

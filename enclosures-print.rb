@@ -2,6 +2,8 @@ require 'date'
 require 'uri'
 require_relative 'u'
 
+def parse line; line[1..-1].split('!').map{|exp| exp.split(':=', 2)}.to_h; end
+
 def simple p; File.basename p; end
 def timestamp p
   File.basename(p, ".*") + "." + DateTime.now.strftime("%Q") + File.extname(p)
@@ -9,10 +11,8 @@ end
 
 ofile = ENV['t'].to_s != '' ? method(:timestamp) : method(:simple)
 
-# input: foo!http://example.com/file.m4v!.mp3|true
-# output: media/foo/file.m4v!http://example.com/file.m4v!.mp3|true
 while (line = gets)
-  name, feed, convert_to, reverse = line.split("!")
-  p = norm URI(feed).path
-  puts [File.join('media', name, ofile.call(p)), feed, convert_to, reverse].join '!'
+  c = parse line
+  c['.name'] = File.join('media', c['.name'], ofile.call(norm URI(c['.url']).path))
+  puts ':' + c.map{|k,v| "#{k}:=#{v}"}.join('!')
 end
