@@ -49,8 +49,6 @@ e.curl='wget -q --show-progress $$1 -O $$@'
     like e.curl='@echo $$@'
 e.curl.opt='-s'
     pass additional opts to curl (valid only if you do not modify `e.curl`)
-t=1
-    add a timestamp in the output name of each enclosure
 endef
 
 .PHONY: help

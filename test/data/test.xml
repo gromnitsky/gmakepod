@@ -98,7 +98,7 @@ version="2.0">
    all of your answers here.</itunes:summary>
    
    <enclosure
-   url="http://example.com/podcasts/everything/AllAboutEverythingEpisode2.mp3"
+   url="http://example.com?foo=bar"
    length="  5650889" type="audio/mpeg" />
    <enclosure
    url="http://example.com/podcasts/everything/bambula.mp3"
