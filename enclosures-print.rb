@@ -9,8 +9,8 @@ def filename p
 end
 
 while (line = gets)
-  c = parse line
+  c = parse line.strip
   p = URI(c['.url']).path; p = 'noname.noext' if p.size == 0
   c['.name'] = File.join('media', c['.name'], filename(norm p))
-  puts ':' + c.map{|k,v| "#{k}:=#{v}"}.join('!')
+  puts ':' + props_fmt(c, '').join('!')
 end

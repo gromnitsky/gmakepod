@@ -5,7 +5,7 @@ define header :=
 # auto-generated
 src := $(src)
 e.curl.opt :=
-e.curl = curl --connect-timeout 15 -fL -C - "$$1" -o $$@ $(e.curl.opt)
+e.curl = curl --connect-timeout 15 -fL -C - '$$1' -o $$@ $(e.curl.opt)
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)
@@ -19,11 +19,13 @@ ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 .PHONY: all
 endef
 
+escape = $(subst $,$$$$,$1)
+
 define rule =
 $(.name):
 	@mkdir -p $$(dir $$@)
-	$$(call e.curl,$(.url))
-	@ruby $$(src)/history.rb add "$(.url)"
+	$$(call e.curl,$(call escape,$(.url)))
+	@ruby $$(src)/history.rb add '$(call escape,$(.url))'
 endef
 
 targets := $(foreach idx, $(MAKECMDGOALS),\
