@@ -21,16 +21,16 @@ Despite the number of src files, the client itself is rather small:
 ~~~
 $ f='gmakepod *rb *mk'; join -j2 <(wc -l $f) <(du -bhc $f)|column -t -NFILE,LINES,SIZE
 FILE                  LINES  SIZE
-gmakepod              57     1.5K
-enclosures-print.rb   18     508
+gmakepod              57     1.3K
+enclosures-print.rb   16     442
 history.rb            21     542
-ini-parse.rb          11     319
-u.rb                  3      78
+ini-parse.rb          9      241
+u.rb                  11     354
 enclosures-reject.mk  5      167
-feed-parse.mk         25     777
-generate.mk           44     822
+feed-parse.mk         28     834
+generate.mk           47     924
 u.mk                  7      195
-total                 191    4.8K
+total                 201    4.9K
 ~~~
 
 ## Install
@@ -59,8 +59,8 @@ convert-to = .mp3
 
 An optional `convert-to` prop tells gmakepod that it'll need to
 convert each enclosure (from that feed only) to `mp3` (the dot is
-important). Other valid props here are `e` & `reverse`. Type `gmakepod
-help` to read what they mean.
+important). Other valid props here are `e`, `reverse`, `filter.type` &
+`filter.url`. Type `gmakepod help` to read what they mean.
 
 Now, cd to `~/podcasts` & type `gmakepod`. It should download the last
 2 enclosures tops from each feed.
@@ -82,19 +82,22 @@ For parallel downloads, pass `j=N` param.
 
 ## How does it work?
 
-1. parse .ini to extract feeds names & urls
-2. fetch & parse each feed to extract enclosures urls
-3. generate a proper output file name for each url
-4. check if we have already downloaded a url in the past, filter out;
-   we don't need any db for that, for Ruby has a nifty `PStore` lib
-   that nobody ever uses
-5. generate a makefile, where we list all the rules for all the
-   enclosures
-6. run the makefile
+gmakepod target  | desc
+---------------- | -------------------------------------------------------------
+.feeds           | parse .ini to extract feeds names & urls
+.enclosures      | fetch & parse each feed to extract enclosures urls
+.files           | generate a proper output file name for each url
+.files.new       | check if we have already downloaded a url in the past, filter out; we don't need any db for that, for Ruby has a nifty `PStore` lib; that nobody ever uses
+.download.mk     | generate a makefile, where we list all the rules for all the enclosures
+run              | run the makefile
 
 xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
 
 ![kumamon](https://ultraimg.com/images/2018/04/23/MTW8.jpg)
+
+## Bugs
+
+* urls cannot contain `!'"` chars
 
 ## License
 
