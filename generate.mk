@@ -1,11 +1,12 @@
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 include $(src)/u.mk
 
+curl = curl --connect-timeout 15 -fL -C - '$$1' -o $$@ $(curl.opt)
+
 define header :=
 # auto-generated
 src := $(src)
-e.curl.opt :=
-e.curl = curl --connect-timeout 15 -fL -C - '$$1' -o $$@ $(e.curl.opt)
+e.curl = $(if $(catchup),@echo Memorising $$@ 1>&2,$(curl))
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)

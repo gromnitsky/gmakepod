@@ -19,8 +19,8 @@ opt = $(or $($1),$(.$1),$2)
 
 	@echo $(.name) | grep -Eiq '$(g)' || exit 0
 	@echo Processing $(.name) 1>&2
-	@curl -sfL --connect-timeout 15 -m 60 '$(.url)' | nokogiri -e '\
-puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
+	@curl -sfL --connect-timeout 15 -m 60 '$(.url)' $(curl.opt) | \
+nokogiri -e 'puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(call opt,filter.type,.)/) : true}.\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(call opt,filter.url,.)/)}\

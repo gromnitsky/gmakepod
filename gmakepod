@@ -26,29 +26,31 @@ run: .download.mk
 	ruby $(src)/ini-parse.rb $< > $@
 
 define help :=
-Options (the values are examples, not defaults):
+CL options (the values are examples, not defaults):
 
 s=file.ini
     a list of your subscriptions
-e=10
-    how many enclosures to download
 j=4
     a number of parallel jobs for a downloading phase
 f=1
     force to redownload already processed enclosures; useful w/ g=
 g=ruby
     grab only enclosures matching subscriptions names in .ini
+catchup=1
+    memorise enclosures urls w/o downloading anything
+curl.opt=-s
+    pass additional opts to curl
+
+CL & .ini:
+
+e=10
+    how many enclosures to download
 filter.type=audio
     by the enclosures 'type' attr
 filter.url=mp3
     by the enclosure url; useful when the 'type' attr is missing
 reverse=1
     grab enclosures starting from the bottom of the feed
-e.curl='wget -q --show-progress $$1 -O $$@'
-    can be used for memorizing enclosures urls w/o downloading them,
-    like e.curl='@echo $$@'
-e.curl.opt='-s'
-    pass additional opts to curl (valid only if you do not modify `e.curl`)
 endef
 
 .PHONY: help
