@@ -9,10 +9,10 @@ filter.url :=
 g := .
 
 opt = $(or $($1),$(.$1),$2)
+opt.bool = $(if $(call eq,$1,1),$2)
 
 .ONESHELL:
 
-# FIXME: if an ini section has `reverse=1`, user can't flip the val from the CL
 %:
 	@$(conf_parse_init)
 	@$(call conf_parse,$*)
@@ -24,5 +24,5 @@ nokogiri -e 'puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   select{|e| e["type"] ? e["type"].match(/$(call opt,filter.type,.)/) : true}.\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(call opt,filter.url,.)/)}\
-  $(if $(call opt,reverse),.reverse())[0...$(call opt,e,2)].\
+  $(call opt.bool,$(call opt,reverse),.reverse())[0...$(call opt,e,2)].\
   map{|u| ":" + [".name:=$(.name)", ".url:=#{u}", ".convert-to:=$(.convert-to)"]*?!}'
