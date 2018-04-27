@@ -8,7 +8,8 @@ opt.bool = $(if $(call eq,$1,1),$2)
 .ONESHELL:
 
 %:
-	@$(conf_parse_init)
+	@set -o pipefail	# bash only
+	$(conf_parse_init)
 	$(call conf_parse,$*)
 
 	echo $(.name) | grep -Eiq '$(g)' || exit 0
