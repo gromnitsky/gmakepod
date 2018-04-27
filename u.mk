@@ -4,6 +4,7 @@ define newline
 endef
 
 se = '$(subst ','\'',$(1))'
+#'# emacs font-lock
 conf_parse = $(eval $(subst !,$(newline),$(shell echo $(call se,$1) | awk '{print substr($$0, 2)}')))
 conf_parse_init = $(call conf_parse,:.name=!.url=!.reverse=!.e=!.convert-to=!.filter.name=!.filter.url=)
 eq = $(and $(findstring x$(1),x$(2)), $(findstring x$(2),x$(1)))
