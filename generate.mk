@@ -43,5 +43,5 @@ $(info all: $(targets))
 	@$(conf_parse_init)
 	@$(call conf_parse,$*)
 
-	$(info $(call rule,$*))
+	$(info $(rule))
 	@:

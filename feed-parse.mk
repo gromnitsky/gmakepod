@@ -1,16 +1,10 @@
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 include $(src)/u.mk
 
-e :=
-reverse :=
-filter.type :=
-filter.url :=
-# CL only
 g := .
 
 opt = $(or $($1),$(.$1),$2)
 opt.bool = $(if $(call eq,$1,1),$2)
-
 .ONESHELL:
 
 %:
