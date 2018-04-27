@@ -1,8 +1,8 @@
 require 'cgi'
+require 'shellwords'
 
 def norm p; CGI.unescape(p).gsub(/[^[:word:].,\/-]/, "_"); end
-def xargs_safe s; s.to_s.gsub(/[!'"]/, ?_); end # FIXME
-def escape s; xargs_safe(s).gsub(/\$/, '$$'); end
+def escape s; s.gsub(/[!]/, ?_).gsub(/\$/, '$$').shellescape; end
 def props_fmt h, kprefix
   h.map do |k, v|
     refine = method(k =~ /^\.?(url|filter)/ ? :escape : :norm)

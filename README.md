@@ -97,7 +97,7 @@ xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
 
 ## Bugs
 
-* urls cannot contain `!'"` chars
+* urls cannot contain `!` char
 
 ## License
 
