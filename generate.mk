@@ -6,7 +6,7 @@ curl = curl --connect-timeout 15 -fL -C - '$$1' -o $$@ $(curl.opt)
 define header :=
 # auto-generated
 src := $(src)
-e.curl = $(if $(catchup),@echo Memorising $$@ 1>&2,$(curl))
+e.curl = $(if $(catchup),$(call echo,Memorising $$@),$(curl))
 ffmpeg.mp3 = $$(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $$<
 %.mp3: %.m4v
 	$$(ffmpeg.mp3)
