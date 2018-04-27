@@ -16,7 +16,7 @@ run: .download.mk
 	$(if $(f),cp $< $@,xargs $(mk) $(src)/enclosures-reject.mk < $< > $@)
 
 .files: .enclosures
-	ruby $(src)/enclosures-print.rb < $< > $@
+	xargs ruby $(src)/enclosures-print.rb < $< > $@
 
 .enclosures: .feeds
 	xargs $(mk) $(src)/feed-parse.mk -k -j$$(($(j)*3)) < $< | sort -u > $@

@@ -8,8 +8,8 @@ def filename p
   File.basename(p, ".*") + "." + SecureRandom.hex(4) + File.extname(p)
 end
 
-while (line = gets)
-  c = parse line.strip
+ARGV.each do |enclosure|
+  c = parse enclosure
   p = URI(c['.url']).path; p = 'noname.noext' if p.size == 0
   c['.name'] = File.join('media', c['.name'], filename(norm p))
   puts ':' + props_fmt(c, '').join('!')
