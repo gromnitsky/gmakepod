@@ -12,7 +12,7 @@ opt.bool = $(if $(call eq,$1,1),$2)
 	$(conf_parse_init)
 	$(call conf_parse,$*)
 
-	echo $(.name) | grep -Eiq '$(g)' || exit 0
+	echo $(.name) | grep -Eiq $(call se,$(g)) || exit 0
 	$(call echo,Processing $(.name))
 	curl -sfL --connect-timeout 15 -m 60 $(call se,$(.url)) $(curl.opt) | \
 nokogiri -C$(src)/u.rb -e 'puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
