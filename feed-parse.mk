@@ -5,10 +5,11 @@ g := .
 
 opt = $(or $($1),$(.$1),$2)
 opt.bool = $(if $(call eq,$1,1),$2)
+SHELL := bash
 .ONESHELL:
 
 %:
-	@set -o pipefail	# bash only
+	@set -o pipefail
 	$(conf_parse_init)
 	$(call conf_parse,$*)
 
