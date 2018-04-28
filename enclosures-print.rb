@@ -10,7 +10,7 @@ end
 
 ARGV.each do |enclosure|
   c = parse enclosure
-  p = URI(c['.url']).path; p = 'noname.noext' if p.size == 0
+  p = URI(c['.url']).path; p = 'noname.mp3' if p.size == 0
   c['.name'] = File.join('media', c['.name'], filename(norm p))
   puts ':' + props_fmt(c, '').join('!')
 end
