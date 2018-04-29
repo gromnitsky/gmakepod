@@ -30,8 +30,8 @@ $(.name):
 endef
 
 targets := $(foreach idx, $(MAKECMDGOALS),\
-  $(conf_parse_init)\
-  $(call conf_parse,$(idx))\
+  $(props_parse_init)\
+  $(call props_parse,$(idx))\
   $(if $(.convert-to),\
     $(basename $(.name))$(.convert-to),\
    $(.name)))
@@ -40,8 +40,8 @@ $(info $(header))
 $(info all: $(targets))
 
 %:
-	@$(conf_parse_init)
-	@$(call conf_parse,$*)
+	@$(props_parse_init)
+	@$(call props_parse,$*)
 
 	$(info $(rule))
 	@:

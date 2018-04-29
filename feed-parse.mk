@@ -10,8 +10,8 @@ SHELL := bash
 
 %:
 	@set -o pipefail
-	$(conf_parse_init)
-	$(call conf_parse,$*)
+	$(props_parse_init)
+	$(call props_parse,$*)
 
 	echo $(.name) | grep -Eiq $(call se,$(g)) || exit 0
 	$(call echo,Processing $(.name))

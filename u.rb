@@ -11,7 +11,7 @@ def props h, kprefix
     ["#{kprefix}#{norm k.to_s}", refine.call(v.to_s)]
   end.to_h
 end
-def line_parse line
+def props_parse line
   JSON.parse(line[1..-1]).transform_values {|v| recipe_unescape(v)}
 end
 class Hash
