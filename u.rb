@@ -14,3 +14,6 @@ end
 def line_parse line
   JSON.parse(line[1..-1]).transform_values {|v| recipe_unescape(v)}
 end
+class Hash
+  def xargs; ':' + self.to_json.shellescape; end
+end
