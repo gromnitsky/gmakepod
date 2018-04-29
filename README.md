@@ -19,21 +19,23 @@ using Make for something it wasn't intended for:
 Despite the number of src files, the client itself is rather small:
 
 ~~~
-$ f='gmakepod *rb *mk'; join -j2 <(wc -l $f) <(du -bhc $f)|column -t -NFILE,LINES,SIZE
+$ f='*rb *mk gmakepod'; join -j2 <(wc -l $f) <(du -bhc $f) | column -t -NFILE,LINES,SIZE
 FILE                  LINES  SIZE
-gmakepod              57     1.3K
-enclosures-print.rb   16     442
+enclosures-print.rb   14     355
 history.rb            21     542
-ini-parse.rb          9      241
-u.rb                  11     354
-enclosures-reject.mk  5      167
-feed-parse.mk         28     834
-generate.mk           47     924
-u.mk                  7      195
-total                 201    4.9K
+ini-parse.rb          6      174
+u.rb                  19     542
+enclosures-reject.mk  5      196
+feed-parse.mk         24     827
+generate.mk           47     925
+u.mk                  14     697
+gmakepod              57     1.3K
+total                 207    5.5K
 ~~~
 
 ## Install
+
+Requires GNU Make 4+, Ruby 2.4+, curl.
 
 ~~~
 $ git clone --recurse-submodules https://github.com/gromnitsky/gmakepod.git
@@ -97,7 +99,7 @@ xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
 
 ## Bugs
 
-* urls cannot contain `!` char
+* tested on Fedora 27 only
 
 ## License
 
