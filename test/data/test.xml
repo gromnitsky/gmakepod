@@ -70,7 +70,7 @@ version="2.0">
 <category> asdfgh</category> 
   
   <enclosure
-  url="http://localhost/~alex/lib/software/example/make/podcatcher/sh-progress-reporter/test/data/amwb-20110805.ogg"
+  url="http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg"
   length="8727310" type="audio/x-m4a" />
   
   <guid>http://example.com/podcasts/archive/aae20050615.m4a</guid>
