@@ -3,7 +3,7 @@ require 'uri'
 require_relative 'u'
 
 def filename p
-  File.basename(p, ".*") + "." + SecureRandom.hex(4) + File.extname(p)
+  File.basename(p, ".*") + "." + (ENV['GMAKEPOD_TEST_SECURERANDOM'] || SecureRandom.hex(4)) + File.extname(p)
 end
 
 ARGV.each do |enclosure|

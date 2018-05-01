@@ -3,7 +3,7 @@ require 'date'
 
 fail "usage: #{$0} add|del|get|list http://example.com/file.mp3 ..." if ARGV.size < 2
 
-store = PStore.new 'history.pstore', true
+store = PStore.new (ENV['GMAKEPOD_TEST_HISTORY'] || 'history.pstore'), true
 mode = ARGV.shift
 ARGV.each do |url|
   case mode
