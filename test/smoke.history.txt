@@ -1,0 +1,8 @@
+http://cachefly.oreilly.com/digitalmedia/2008/09/deke_mcclelland_psw.mp3
+http://media.devchat.tv/ruby-rogues/RubyRogues050511.mp3?rss=true
+http://media.devchat.tv/ruby-rogues/RubyRogues051211.mp3?rss=true
+http://media.devchat.tv/ruby-rogues/RubyRogues20110519.mp3?rss=true
+http://cdn.conversationsnetwork.org/ITC.SO-Episode86-2010.03.17.mp3
+http://cdn.conversationsnetwork.org/ITC.SO-Episode87-2010.04.15.mp3
+http://example.com?f%20o'"o=*&$SHELL=
+http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg

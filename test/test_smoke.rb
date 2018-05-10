@@ -5,7 +5,7 @@ $data = "#{__dir__}/data"
 $src  = File.absolute_path "#{__dir__}/.."
 
 ENV['GMAKEPOD_TEST_SECURERANDOM'] = '123456'
-ENV['GMAKEPOD_TEST_HISTORY'] = "#{__dir__}/smoke.history.pstore"
+ENV['GMAKEPOD_TEST_HISTORY'] = "#{__dir__}/smoke.history.txt"
 
 def feeds; File.read("#{__dir__}/smoke.feeds") % ([$data]*4); end
 def enclosures; File.read "#{__dir__}/smoke.enclosures"; end
