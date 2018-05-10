@@ -21,16 +21,15 @@ Despite the number of src files, the client itself is rather small:
 ~~~
 $ f='*rb *mk gmakepod'; join -j2 <(wc -l $f) <(du -bhc $f) | column -t -NFILE,LINES,SIZE
 FILE                  LINES  SIZE
-enclosures-print.rb   14     355
-history.rb            21     542
+enclosures-print.rb   14     395
 ini-parse.rb          6      174
-u.rb                  19     542
-enclosures-reject.mk  5      196
-feed-parse.mk         24     827
-generate.mk           47     925
-u.mk                  14     697
+u.rb                  19     543
+enclosures-reject.mk  5      212
+feed-parse.mk         24     830
+generate.mk           48     1.1K
+u.mk                  12     610
 gmakepod              57     1.3K
-total                 207    5.5K
+total                 185    5.0K
 ~~~
 
 ## Install
@@ -89,7 +88,7 @@ gmakepod target  | desc
 .feeds           | parse .ini to extract feeds names & urls
 .enclosures      | fetch & parse each feed to extract enclosures urls
 .files           | generate a proper output file name for each url
-.files.new       | check if we have already downloaded a url in the past, filter out; we don't need any db for that, for Ruby has a nifty `PStore` lib; that nobody ever uses
+.files.new       | check if we have already downloaded a url in the past, filter out
 .download.mk     | generate a makefile, where we list all the rules for all the enclosures
 run              | run the makefile
 
