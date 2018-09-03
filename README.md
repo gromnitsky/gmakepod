@@ -96,9 +96,22 @@ xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
 
 ![kumamon](https://ultraimg.com/images/2018/04/23/MTW8.jpg)
 
-## Bugs
+## Windows port
 
-* tested on Fedora 27 only
+To get a portable gmakepod installation, download an [MSYS2 .tar.xz
+bundle](http://repo.msys2.org/distrib/x86_64/), unpack it, run
+`msys2.exe`.
+
+Inside the msys2 instance:
+
+~~~
+$ pacman -S make gcc git patch ruby gmp-devel libcrypt-devel zlib-devel libiconv-devel
+$ gem install bundler
+~~~
+
+Then proceed with the usual gmakepod setup. The msys2 directory can be
+moved anywhere, the only limitation is that msys2 won't run on fat32
+partitions.
 
 ## License
 
