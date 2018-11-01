@@ -1,5 +1,5 @@
 :\{\".name\":\"media/test_/amwb-20110805.123456.ogg\",\".url\":\"http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg\",\".convert-to\":\".mp3\"\}
-:\{\".name\":\"media/test_/noname.123456.mp3\",\".url\":\"http://example.com\?f\%20o\'\\\"o\=\*\&\$\$SHELL\=\",\".convert-to\":\".mp3\"\}
+:\{\".name\":\"media/test_/noname.123456.mp3\",\".url\":\"http://example.com\?f\%20o\'\\\"o\=\*\&\$\$SHELL\=\&s\=\%20\%09s-and-tab\",\".convert-to\":\".mp3\"\}
 :\{\".name\":\"media/Photography/deke_mcclelland_psw.123456.mp3\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/09/deke_mcclelland_psw.mp3\",\".convert-to\":\"\"\}
 :\{\".name\":\"media/Photography/off_to_beijing_interview_08-04-08.123456.mp3\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/08/off_to_beijing_interview_08-04-08.mp3\",\".convert-to\":\"\"\}
 :\{\".name\":\"media/Ruby_Rogues/RubyRogues050511.123456.mp3\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues050511.mp3\?rss\=true\",\".convert-to\":\"\"\}

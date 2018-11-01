@@ -4,5 +4,5 @@ http://media.devchat.tv/ruby-rogues/RubyRogues051211.mp3?rss=true
 http://media.devchat.tv/ruby-rogues/RubyRogues20110519.mp3?rss=true
 http://cdn.conversationsnetwork.org/ITC.SO-Episode86-2010.03.17.mp3
 http://cdn.conversationsnetwork.org/ITC.SO-Episode87-2010.04.15.mp3
-http://example.com?f%20o'"o=*&$SHELL=
+http://example.com?f%20o'"o=*&$SHELL=&s=%20%09s-and-tab
 http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg
