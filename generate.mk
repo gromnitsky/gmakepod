@@ -5,6 +5,7 @@ curl = curl --connect-timeout 15 -fL -C - $$1 -o $$@ $(curl.opt)
 
 define header :=
 # auto-generated
+.DELETE_ON_ERROR:
 src := $(src)
 e.curl = $(if $(catchup),$(call echo,Memorising $$@),$(curl))
 history = @rlock --timeout 5 history.lock -- ruby --disable-gems -e 'IO.write "history.txt", ARGV[0]+"\n", mode: "a"' $$1 2>/dev/null

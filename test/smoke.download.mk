@@ -1,4 +1,5 @@
 # auto-generated
+.DELETE_ON_ERROR:
 src := __src__/
 e.curl = curl --connect-timeout 15 -fL -C - $1 -o $@ 
 history = @rlock --timeout 5 history.lock -- ruby --disable-gems -e 'IO.write "history.txt", ARGV[0]+"\n", mode: "a"' $1 2>/dev/null
