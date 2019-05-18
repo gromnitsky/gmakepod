@@ -1,0 +1,41 @@
+#!/usr/bin/env -S rake -f
+# -*-ruby-*-
+
+# an aggressive sync over MTP: rm src files after copying them to a destination
+# requires mountpoint(1) & simple-mtpfs(1)
+#
+# usage: podcasts_sync [src=dir/with/my/files] [dest=a/dir/on/a/device]
+# or     podcasts_sync -T
+
+require 'shellwords'
+
+src = ENV['src'] || "#{Dir.home}/podcasts/media"
+mount_point = "#{Dir.home}/mnt/mp3-player"
+dest = File.join mount_point, ENV['dest'] || 'SD card/podcasts'
+
+mp3_src = FileList["#{src}/**/*"].reject{|v| File.directory? v }
+mp3_dest = mp3_src.map{|v| File.join dest, v.sub(src, '')}
+
+desc "src=#{src}, dest=#{dest}"; task :default
+task default: [:umount] if mp3_dest.size > 0
+
+desc "unmount"; task umount: [:rmdir] do
+  sh "fusermount -u #{mount_point.shellescape}"
+end
+
+task rmdir: mp3_dest do
+  sh "find #{dest.shellescape} -type d -empty -print0 | xargs -0r rmdir"
+end
+
+desc "mount #{mount_point}"; task :mount do
+  mkdir_p mount_point, verbose: false
+  sh "mountpoint -q #{mount_point.shellescape} || simple-mtpfs #{mount_point.shellescape}"
+end
+
+mp3_dest.each {|t| task t => [:mount]}
+
+rule(/#{dest}\/.*/ => [proc {|target| target.sub(dest, src)}]) do |t|
+  mkdir_p File.dirname(t.name), verbose: false
+  sh "cp #{t.source.shellescape} #{t.name.shellescape}"
+  rm_f t.source, verbose: false
+end
