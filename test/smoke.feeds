@@ -1,5 +1,5 @@
 :\{\".name\":\"test_\",\".url\":\"file://%s/test.xml\",\".convert-to\":\".mp3\"\}
 :\{\".name\":\"Photography\",\".url\":\"file://%s/photography.xml\",\".filter.type\":\"audio\"\}
 :\{\".name\":\"Ruby_Rogues\",\".url\":\"file://%s/ruby_rogues.xml\",\".reverse\":\"1\",\".e\":\"3\"\}
-:\{\".name\":\"Stack_Overflow\",\".url\":\"file://%s/stackoverflow.xml\"\}
-:\{\".name\":\"invalid\",\".url\":\"omglol\"\}
+:\{\".name\":\"Stack_Overflow\",\".url\":\"file://%s/stackoverflow.xml\",\".curl\":\"custom-downloader\ -o\ \$\$@\"\}
+:\{\".name\":\"invalid\",\".url\":\"file:///omglol_anxehCMkv4ZF06DQAOGV\"\}

@@ -1,9 +1,9 @@
-:\{\".name\":\"test_\",\".url\":\"http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg\",\".convert-to\":\".mp3\"\}
-:\{\".name\":\"test_\",\".url\":\"http://example.com\?f\%20o\'\\\"o\=\*\&\$\$SHELL\=\&s\=\%20\%09s-and-tab\",\".convert-to\":\".mp3\"\}
-:\{\".name\":\"Photography\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/09/deke_mcclelland_psw.mp3\",\".convert-to\":\"\"\}
-:\{\".name\":\"Photography\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/08/off_to_beijing_interview_08-04-08.mp3\",\".convert-to\":\"\"\}
-:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues050511.mp3\?rss\=true\",\".convert-to\":\"\"\}
-:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues051211.mp3\?rss\=true\",\".convert-to\":\"\"\}
-:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues20110519.mp3\?rss\=true\",\".convert-to\":\"\"\}
-:\{\".name\":\"Stack_Overflow\",\".url\":\"http://cdn.conversationsnetwork.org/ITC.SO-Episode87-2010.04.15.mp3\",\".convert-to\":\"\"\}
-:\{\".name\":\"Stack_Overflow\",\".url\":\"http://cdn.conversationsnetwork.org/ITC.SO-Episode86-2010.03.17.mp3\",\".convert-to\":\"\"\}
+:\{\".name\":\"test_\",\".url\":\"http://localhost:8000/sh-progress-reporter/test/data/amwb-20110805.ogg\",\".curl\":\"\",\".convert-to\":\".mp3\"\}
+:\{\".name\":\"test_\",\".url\":\"http://example.com\?f\%20o\'\\\"o\=\*\&\$\$SHELL\=\&s\=\%20\%09s-and-tab\",\".curl\":\"\",\".convert-to\":\".mp3\"\}
+:\{\".name\":\"Photography\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/09/deke_mcclelland_psw.mp3\",\".curl\":\"\",\".convert-to\":\"\"\}
+:\{\".name\":\"Photography\",\".url\":\"http://cachefly.oreilly.com/digitalmedia/2008/08/off_to_beijing_interview_08-04-08.mp3\",\".curl\":\"\",\".convert-to\":\"\"\}
+:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues050511.mp3\?rss\=true\",\".curl\":\"\",\".convert-to\":\"\"\}
+:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues051211.mp3\?rss\=true\",\".curl\":\"\",\".convert-to\":\"\"\}
+:\{\".name\":\"Ruby_Rogues\",\".url\":\"http://media.devchat.tv/ruby-rogues/RubyRogues20110519.mp3\?rss\=true\",\".curl\":\"\",\".convert-to\":\"\"\}
+:\{\".name\":\"Stack_Overflow\",\".url\":\"http://cdn.conversationsnetwork.org/ITC.SO-Episode87-2010.04.15.mp3\",\".curl\":\"custom-downloader\ -o\ \$@\",\".convert-to\":\"\"\}
+:\{\".name\":\"Stack_Overflow\",\".url\":\"http://cdn.conversationsnetwork.org/ITC.SO-Episode86-2010.03.17.mp3\",\".curl\":\"custom-downloader\ -o\ \$@\",\".convert-to\":\"\"\}
