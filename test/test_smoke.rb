@@ -5,6 +5,7 @@ $data = "#{__dir__}/data"
 $src  = File.absolute_path "#{__dir__}/.."
 
 ENV['GMAKEPOD_TEST_SECURERANDOM'] = '123456'
+$make = ENV['GMAKEPOD_MAKE'] || 'make'
 ENV['GMAKEPOD_TEST_HISTORY'] = "#{__dir__}/smoke.history.txt"
 
 def feeds; File.read("#{__dir__}/smoke.feeds") % ([$data]*4); end
@@ -19,7 +20,7 @@ class Smoke < Test::Unit::TestCase
   end
 
   def test_feed_parse_mk
-    props, log = Open3.capture3 "xargs make -f #{$src}/feed-parse.mk", stdin_data: feeds
+    props, log = Open3.capture3 "xargs #{$make} -f #{$src}/feed-parse.mk", stdin_data: feeds
     assert_equal log.split("\n")[0..4], ["Processing test_", "Processing Photography", "Processing Ruby_Rogues", "Processing Stack_Overflow", "Processing invalid"]
     assert_equal props, enclosures
   end
@@ -30,12 +31,12 @@ class Smoke < Test::Unit::TestCase
   end
 
   def test_enclosures_reject_mk
-    props, _ = Open3.capture3 "xargs make -f #{$src}/enclosures-reject.mk", stdin_data: files
+    props, _ = Open3.capture3 "xargs #{$make} -f #{$src}/enclosures-reject.mk", stdin_data: files
     assert_equal props, files_new
   end
 
   def test_downloads_mk
-    props, _ = Open3.capture3 "xargs make -f #{$src}/generate.mk", stdin_data: files_new
+    props, _ = Open3.capture3 "xargs #{$make} -f #{$src}/generate.mk", stdin_data: files_new
     assert_equal props, download_mk
   end
 end
