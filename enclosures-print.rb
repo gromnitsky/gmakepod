@@ -2,9 +2,8 @@ require 'securerandom'
 require 'uri'
 require_relative 'u'
 
-def filename p
-  File.basename(p, ".*") + "." + (ENV['GMAKEPOD_TEST_SECURERANDOM'] || SecureRandom.hex(4)) + File.extname(p)
-end
+def rnd; ENV['GMAKEPOD_TEST_SECURERANDOM'] || 2.times.map{SecureRandom.hex(4)}.join('.'); end
+def filename p; File.basename(p, ".*") + "." + rnd + File.extname(p); end
 
 ARGV.each do |enclosure|
   c = props_parse enclosure

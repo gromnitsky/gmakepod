@@ -7,7 +7,7 @@ def recipe_escape s; s.gsub(/\$/, '$$'); end
 def recipe_unescape s; s.gsub(/\${2}/, '$'); end
 def props h, kprefix
   h.map do |k, v|
-    refine = method(k =~ /^\.?(url|filter)/ ? :recipe_escape : :norm)
+    refine = method(k =~ /^\.?(url|filter|curl)/ ? :recipe_escape : :norm)
     ["#{kprefix}#{norm k.to_s}", refine.call(v.to_s)]
   end.to_h
 end

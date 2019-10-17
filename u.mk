@@ -4,7 +4,7 @@ define newline :=
 
 
 endef
-props_def := :{".name":"" , ".url":"" , ".reverse":"" , ".e":"" , ".convert-to":"" , ".filter.name":"" , ".filter.url":""}
+props_def := :{".name":"" , ".url":"" , ".reverse":"" , ".e":"" , ".convert-to":"" , ".filter.name":"" , ".filter.url":"", ".curl":""}
 
 props_parse = $(eval $(subst $(separator),$(newline),$(shell echo $(call se,$1) | ruby -rjson --disable-gems -n -e 'puts JSON.parse($$_[1..-1]).map{|k,v| "$(_hash){k}:=$(_hash){v}"}.join("$(separator)")' )))
 props_parse_init = $(call props_parse,$(props_def))
