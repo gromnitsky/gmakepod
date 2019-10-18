@@ -8,6 +8,7 @@ Why not? Besides 'because we can', this are the features you get when
 using Make for something it wasn't intended for:
 
 * download in parallel;
+* youtube-dl integration;
 * filter by subs name, enclosure type or url;
 * auto-convert odd ogg/m4a/whatever to mp3;
 * no pointless re-downloading of enclosures unless you command
@@ -21,15 +22,15 @@ Despite the number of src files, the client itself is rather small:
 ~~~
 $ f='*rb *mk gmakepod'; join -j2 <(wc -l $f) <(du -bhc $f) | column -t -NFILE,LINES,SIZE
 FILE                  LINES  SIZE
-enclosures-print.rb   14     395
+enclosures-print.rb   13     444
 ini-parse.rb          6      174
-u.rb                  19     543
+u.rb                  19     548
 enclosures-reject.mk  5      212
-feed-parse.mk         24     830
-generate.mk           48     1.1K
-u.mk                  12     610
+feed-parse.mk         24     877
+generate.mk           44     991
+u.mk                  13     646
 gmakepod              57     1.3K
-total                 185    5.0K
+total                 181    5.1K
 ~~~
 
 ## Install
@@ -80,6 +81,32 @@ If you run `gmakepod` again it says '`make[1]: *** No targets.
 Stop.`' because it refuses to process already processed enclosures.
 
 For parallel downloads, pass `j=N` param.
+
+## youtube-dl
+
+tl;dr: to get audio from the Computer History Museum playlist:
+
+~~~
+[CHM Oral History]
+url = https://youtube-dl-feeds.herokuapp.com/https://www.youtube.com/playlist?list=PLQsxaNhYv8daKdGi7s85ubzbWdTB36-_q
+curl = youtube-dl -o $@ -x --add-metadata --no-part
+~~~
+
+This will fetch a specially augmented youtube feed & run youtube-dl
+for each enclosure.
+
+Youtube provides several types of atom feeds, but they all lack
+enclosures in them. `youtube-dl-feeds.herokuapp.com` server injects
+enclosure links to youtube videos. (It doesn't log anything, have no
+state, the source is available
+[here](https://github.com/gromnitsky/youtube-dl-feeds); you can run
+your own server if you trust no one.)
+
+We cannot put real enclosure links into the feed, for the only way to
+get a format of the audio/video, contained behind a youtube url, is to
+replicate a youtube-dl job.
+
+`convert-to` prop doesn't work here.
 
 ## How does it work?
 
