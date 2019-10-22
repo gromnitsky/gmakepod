@@ -10,7 +10,7 @@ using Make for something it wasn't intended for:
 * download in parallel;
 * youtube-dl integration;
 * filter by subs name, enclosure type or url;
-* auto-convert odd ogg/m4a/whatever to mp3;
+* auto-convert ogg/m4a to mp3 or vice-versa;
 * no pointless re-downloading of enclosures unless you command
   otherwise;
 * sort in reverse, so you may fetch the 1st 2 episodes, instead of the
@@ -119,7 +119,7 @@ gmakepod target  | desc
 .download.mk     | generate a makefile, where we list all the rules for all the enclosures
 run              | run the makefile
 
-xxx->mp3 conversions require ffmpeg (tested /w 3.3.6) & gawk.
+xxx->mp3 conversions require ffmpeg (tested /w 4.1.4) & gawk.
 
 ![kumamon](https://ultraimg.com/images/2018/04/23/MTW8.jpg)
 
