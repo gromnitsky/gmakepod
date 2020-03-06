@@ -2,15 +2,18 @@
 .DELETE_ON_ERROR:
 src := __src__/
 history = @rlock --timeout 5 history.lock -- ruby --disable-gems -e 'IO.write "history.txt", ARGV[0]+"\n", mode: "a"' $1 2>/dev/null
-ffmpeg.mp3 = $(src)/sh-progress-reporter/example-ffmpeg-mp3.sh $<
+ffmpeg := $(src)/sh-progress-reporter/example-ffmpeg.sh
 %.mp3: %.m4v
-	$(ffmpeg.mp3)
+	$(ffmpeg) -i $< -vn $@
 	rm $<
 %.mp3: %.m4a
-	$(ffmpeg.mp3)
+	$(ffmpeg) -i $< -vn $@
+	rm $<
+%.m4a: %.mp3
+	$(ffmpeg) -i $< -c:a aac -vn $@
 	rm $<
 %.mp3: %.ogg
-	$(ffmpeg.mp3)
+	$(ffmpeg) -i $< -vn $@
 	rm $<
 .PHONY: all
 all:
