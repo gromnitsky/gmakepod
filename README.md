@@ -88,7 +88,7 @@ tl;dr: to get audio from the Computer History Museum playlist:
 
 ~~~
 [CHM Oral History]
-url = https://youtube-dl-feeds.herokuapp.com/https://www.youtube.com/playlist?list=PLQsxaNhYv8daKdGi7s85ubzbWdTB36-_q
+url = https://youtube-dl-feeds.sigwait.tk/https://www.youtube.com/playlist?list=PLQsxaNhYv8daKdGi7s85ubzbWdTB36-_q
 curl = youtube-dl -o $@ -x --add-metadata --no-part
 ~~~
 
@@ -96,7 +96,7 @@ This will fetch a specially augmented youtube feed & run youtube-dl
 for each enclosure.
 
 Youtube provides several types of atom feeds, but they all lack
-enclosures in them. `youtube-dl-feeds.herokuapp.com` server injects
+enclosures in them. `youtube-dl-feeds.sigwait.tk` server injects
 enclosure links to youtube videos. (It doesn't log anything, have no
 state, the source is available
 [here](https://github.com/gromnitsky/youtube-dl-feeds); you can run
@@ -121,7 +121,7 @@ run              | run the makefile
 
 xxx->mp3 conversions require ffmpeg (tested /w 4.1.4) & gawk.
 
-![kumamon](https://ultraimg.com/images/2018/04/23/MTW8.jpg)
+![kumamon](http://sigwait.tk/~alex/junk/kumamon.jpg)
 
 ## Windows port
 
