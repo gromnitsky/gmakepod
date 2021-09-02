@@ -1,5 +1,6 @@
 # auto-generated
 .DELETE_ON_ERROR:
+comma := ,
 src := __src__/
 history = @rlock --timeout 5 history.lock -- ruby --disable-gems -e 'IO.write "history.txt", ARGV[0]+"\n", mode: "a"' $1 2>/dev/null
 ffmpeg := $(src)/sh-progress-reporter/example-ffmpeg.sh

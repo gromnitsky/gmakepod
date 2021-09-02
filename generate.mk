@@ -4,6 +4,7 @@ include $(src)/u.mk
 define header :=
 # auto-generated
 .DELETE_ON_ERROR:
+comma := ,
 src := $(src)
 history = @rlock --timeout 5 history.lock -- ruby --disable-gems -e 'IO.write "history.txt", ARGV[0]+"\n", mode: "a"' $$1 2>/dev/null
 ffmpeg := $$(src)/sh-progress-reporter/example-ffmpeg.sh
@@ -22,7 +23,9 @@ ffmpeg := $$(src)/sh-progress-reporter/example-ffmpeg.sh
 .PHONY: all
 endef
 
-escape = $(call se,$(subst $,$$$$,$1))
+comma := ,
+escape-commas = $(subst $(comma),$$(comma),$1)
+escape = $(call escape-commas,$(call se,$(subst $,$$$$,$1)))
 e.curl = $(if $(catchup),$(call echo,Memorising $$@),$(or $(curl),$(.curl),curl --connect-timeout 15 -fL -C - -o $$@) $(curl.opt) $1)
 
 define rule =
