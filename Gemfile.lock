@@ -3,19 +3,17 @@ GEM
   specs:
     inifile (3.0.0)
     lockfile (2.1.3)
-    mini_portile2 (2.5.0)
-    nokogiri (1.11.2)
-      mini_portile2 (~> 2.5.0)
+    nokogiri (1.13.6-x86_64-linux)
       racc (~> 1.4)
-    racc (1.5.2)
+    racc (1.6.0)
 
 PLATFORMS
-  ruby
+  x86_64-linux
 
 DEPENDENCIES
   inifile (~> 3.0.0)
   lockfile (~> 2.1.3)
-  nokogiri (~> 1.11.2)
+  nokogiri (~> 1.13.6)
 
 BUNDLED WITH
-   2.1.2
+   2.3.7
