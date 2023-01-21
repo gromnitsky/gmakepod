@@ -26,16 +26,16 @@ enclosures-print.rb   13     444
 ini-parse.rb          6      174
 u.rb                  19     548
 enclosures-reject.mk  5      212
-feed-parse.mk         24     877
-generate.mk           44     991
+feed-parse.mk         24     893
+generate.mk           50     1.2K
 u.mk                  13     646
 gmakepod              57     1.3K
-total                 181    5.1K
+total                 187    5.3K
 ~~~
 
 ## Install
 
-Requires GNU Make 4+, Ruby 2.4+, curl.
+Requires GNU Make 4+, Ruby 2.7+, curl.
 
 ~~~
 $ git clone --recurse-submodules https://github.com/gromnitsky/gmakepod.git
@@ -121,7 +121,7 @@ run              | run the makefile
 
 xxx->mp3 conversions require ffmpeg (tested /w 4.1.4) & gawk.
 
-![kumamon](http://sigwait.tk/~alex/junk/kumamon.jpg)
+![kumamon](https://sigwait.tk/~alex/mm/kumamon.jpg)
 
 ## Windows port
 
