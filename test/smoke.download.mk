@@ -16,6 +16,12 @@ ffmpeg := $(src)/sh-progress-reporter/example-ffmpeg.sh
 %.mp3: %.ogg
 	$(ffmpeg) -i $< -vn $@
 	rm $<
+%.ogg: %.mp3
+	$(ffmpeg) -i $< -vn $@
+	rm $<
+%.ultrafast.mp3: %.mp3
+	$(ffmpeg) -i $< -vn -c:a libmp3lame -qscale:a 8 $@
+	rm $<
 .PHONY: all
 all:
 
