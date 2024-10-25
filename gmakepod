@@ -1,7 +1,7 @@
 #!/usr/bin/make -f
 
 s := podcasts.ini
-j := 1
+export j := 1
 
 src := $(dir $(realpath $(lastword $(MAKEFILE_LIST))))
 mk := $(MAKE) --no-print-directory -f

@@ -13,6 +13,7 @@ def enclosures; File.read "#{__dir__}/smoke.enclosures"; end
 def files; File.read "#{__dir__}/smoke.files"; end
 def files_new; File.read "#{__dir__}/smoke.files.new"; end
 def download_mk; File.read("#{__dir__}/smoke.download.mk").sub('__src__', $src); end
+def download_j1_mk; File.read("#{__dir__}/smoke.download_j1.mk").sub('__src__', $src); end
 
 class Smoke < Test::Unit::TestCase
   # ruby ../ini-parse.rb data/subscriptions.ini.erb | sed 's|/home/alex/lib/software/alex/gmakepod/test/data|%s|'> smoke.feeds
@@ -40,6 +41,9 @@ class Smoke < Test::Unit::TestCase
   end
 
   def test_downloads_mk
+    props, _ = Open3.capture3 "xargs #{$make} j=1 -f #{$src}/generate.mk", stdin_data: files_new
+    assert_equal props, download_j1_mk
+
     props, _ = Open3.capture3 "xargs #{$make} -f #{$src}/generate.mk", stdin_data: files_new
     assert_equal props, download_mk
   end
