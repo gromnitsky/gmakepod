@@ -4,15 +4,15 @@ A tiny podcast client written in GNU Make with sprinkles of Ruby.
 
 ## Why?
 
-Why not? Besides 'because we can', this are the features you get when
+Why not? Besides [*because we can*][], this are the features you get when
 using Make for something it wasn't intended for:
 
+[*because we can*]: https://sigwait.org/~alex/blog/2018/05/11/writing-a-podcast-client-in-gnu-make.html
+
 * download in parallel;
-* youtube-dl integration;
+* yt-dlp integration;
 * filter by subs name, enclosure type or url;
 * auto-convert ogg/m4a to mp3 or vice-versa;
-* no pointless re-downloading of enclosures unless you command
-  otherwise;
 * sort in reverse, so you may fetch the 1st 2 episodes, instead of the
   last 2, for example;
 * 'catch up' w/ feeds w/o downloading anything.
@@ -27,10 +27,10 @@ ini-parse.rb          6      174
 u.rb                  19     548
 enclosures-reject.mk  5      212
 feed-parse.mk         24     893
-generate.mk           50     1.2K
+generate.mk           56     1.3K
 u.mk                  13     646
 gmakepod              57     1.3K
-total                 187    5.3K
+total                 193    5.4K
 ~~~
 
 ## Install
@@ -82,17 +82,17 @@ Stop.`' because it refuses to process already processed enclosures.
 
 For parallel downloads, pass `j=N` param.
 
-## youtube-dl
+## yt-dlp
 
 tl;dr: to get audio from the Computer History Museum playlist:
 
 ~~~
 [CHM Oral History]
 url = https://apps.sigwait.org/youtube-dl-feeds/https://www.youtube.com/playlist?list=PLQsxaNhYv8daKdGi7s85ubzbWdTB36-_q
-curl = youtube-dl -o $@ -x --add-metadata --no-part
+curl = yt-dlp -o $@ -x --audio-format mp3 --add-metadata --no-part
 ~~~
 
-This will fetch a specially augmented youtube feed & run youtube-dl
+This will fetch a specially augmented youtube feed & run yt-dlp
 for each enclosure.
 
 Youtube provides several types of atom feeds, but they all lack
@@ -104,9 +104,9 @@ your own server if you trust no one.)
 
 We cannot put real enclosure links into the feed, for the only way to
 get a format of the audio/video, contained behind a youtube url, is to
-replicate a youtube-dl job.
+replicate a yt-dlp job.
 
-`convert-to` prop doesn't work here.
+`convert-to` prop is not applicable here.
 
 ## How does it work?
 
@@ -122,23 +122,6 @@ run              | run the makefile
 xxx->mp3 conversions require ffmpeg (tested /w 4.1.4) & gawk.
 
 ![kumamon](https://sigwait.org/~alex/mm/kumamon.jpg)
-
-## Windows port
-
-To get a portable gmakepod installation, download an [MSYS2 .tar.xz
-bundle](http://repo.msys2.org/distrib/x86_64/), unpack it, run
-`msys2.exe`.
-
-Inside the msys2 instance:
-
-~~~
-$ pacman -S make gcc git patch ruby gmp-devel libcrypt-devel zlib-devel libiconv-devel
-$ gem install bundler
-~~~
-
-Then proceed with the usual gmakepod setup. The msys2 directory can be
-moved anywhere, the only limitation is that msys2 won't run on fat32
-partitions.
 
 ## License
 
