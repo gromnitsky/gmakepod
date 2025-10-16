@@ -21,4 +21,4 @@ nokogiri -C$(src)/u.rb -e 'puts $$_.css("enclosure,link[rel=\"enclosure\"]").\
   map{|e| e["url"] || e["href"]}.\
   select{|url| url.match(/$(call opt,filter.url,.)/)}\
   $(call opt.bool,$(call opt,reverse),.reverse())[0...$(call opt,e,2)].\
-  map{|u| {".name" => "$(.name)", ".url" => recipe_escape(URI::DEFAULT_PARSER.escape(u.strip, /\s/)), ".curl" => "$(.curl)", ".convert-to" => "$(.convert-to)"}.xargs }'
+  map{|u| {".name" => "$(.name)", ".url" => recipe_escape(URI::DEFAULT_PARSER.escape(u.strip, /\s/)), ".curl" => "$(.curl)", ".ignore-url-query" => "$(.ignore-url-query)", ".convert-to" => "$(.convert-to)"}.xargs }'

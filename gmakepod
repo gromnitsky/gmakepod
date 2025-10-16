@@ -51,6 +51,8 @@ filter.url=mp3
     by the enclosure url; useful when the 'type' attr is missing
 reverse=1
     grab enclosures starting from the bottom of the feed
+ignore-url-query=1
+    cut url "query" part (everything after `?`) during history check
 endef
 
 .PHONY: help
